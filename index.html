@@ -19,48 +19,64 @@
 </head>
 <body>
 
-<header class="top">
-  <a class="name" href="#top">Zackary Boudekak</a>
-  <nav aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top"><b>Zackary Boudekak</b><span>Software engineer, Reading</span></a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="btn primary small" href="#contact">Start a project</a>
+    </nav>
+  </header>
+</div>
 
 <main id="top">
-  <div class="col opening">
-    <h1>I build custom software that takes the stress out of running a business.</h1>
-    <p class="lede">I'm a software engineer in Reading, taking on freelance work alongside the final year of my degree. Most of what I build is the unglamorous, useful kind: tools that replace a spreadsheet, connect two systems that don't talk, or turn an hour of admin into a button. The best example is <a href="#work">VoQuota</a>, which I co-founded.</p>
-    <dl class="cv">
-      <dt>Now</dt><dd>Freelance software engineer <span>· open to new projects</span></dd>
-      <dt>Co-founder</dt><dd>VoQuota <span>· quoting and invoicing for tradespeople</span></dd>
-      <dt>2025 to 2026</dt><dd>Cloud Engineer Intern <span>· Virgin Media O2, 13 months</span></dd>
-      <dt>2023 to 2027</dt><dd>BSc Computer Science (Hons) <span>· University of Reading</span></dd>
-    </dl>
+  <div class="wrap">
+    <div class="opening">
+      <div>
+        <h1>I build custom software that takes the stress out of running a business.</h1>
+        <p class="lede">I'm a software engineer in Reading, taking on freelance work alongside the final year of my degree. Most of what I build is the unglamorous, useful kind: tools that replace a spreadsheet, connect two systems that don't talk, or turn an hour of admin into a button. The best example is <a href="#work">VoQuota</a>, which I co-founded.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Tell me about your project</a>
+          <a class="btn" href="#work">See VoQuota in action</a>
+        </div>
+      </div>
+      <dl class="cv">
+        <div><dt>Now</dt><dd>Freelance software engineer<span>Open to new projects</span></dd></div>
+        <div><dt>Co-founder</dt><dd>VoQuota<span>Quoting and invoicing for tradespeople</span></dd></div>
+        <div><dt>2025 to 2026</dt><dd>Cloud Engineer Intern<span>Virgin Media O2, 13 months</span></dd></div>
+        <div><dt>2023 to 2027</dt><dd>BSc Computer Science (Hons)<span>University of Reading</span></dd></div>
+      </dl>
+    </div>
   </div>
 
-  <section id="work">
-    <div class="col">
-      <div class="head">
-        <span class="mono">Selected work</span>
-        <h2>VoQuota</h2>
+  <section id="work" class="band tint">
+    <div class="wrap">
+      <div class="split">
+        <div class="label"><span class="mono">Selected work</span></div>
+        <div class="content">
+          <div class="head"><h2>VoQuota: quotes and invoices for tradespeople</h2></div>
+          <div class="work-text">
+            <p>Tradespeople lose jobs when quoting takes too long. Writing them in Word or a spreadsheet after a full day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it to the customer, and turn it into an invoice with one click once it's accepted.</p>
+            <p>I co-founded it with a fellow software engineering intern at Virgin Media O2. We designed, built and launched it between the two of us.</p>
+            <div class="facts">
+              <div><span class="mono">Role</span><b>Co-founder, engineer</b></div>
+              <div><span class="mono">Status</span><b>Live</b></div>
+              <div><span class="mono">Plan</span><b>£24.99 a month</b></div>
+            </div>
+            <ul>
+              <li>A quote builder that adds up labour, materials and extras</li>
+              <li>A customer page to accept or decline a quote, with no account needed</li>
+              <li>Each business's own logo and colours on every quote, invoice and PDF</li>
+              <li>Built to be used from a phone, on the job</li>
+            </ul>
+            <div class="inline-links"><a href="https://www.voquota.com/" target="_blank" rel="noopener">Visit voquota.com ↗</a></div>
+          </div>
+        </div>
       </div>
-      <div class="work-text">
-        <p>Tradespeople lose jobs when quoting takes too long. Writing them in Word or a spreadsheet after a full day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it to the customer, and turn it into an invoice with one click once it's accepted.</p>
-        <p>I co-founded it with a fellow software engineering intern at Virgin Media O2. We designed, built and launched it between the two of us.</p>
-        <ul>
-          <li>A quote builder that adds up labour, materials and extras</li>
-          <li>A customer page to accept or decline a quote, with no account needed</li>
-          <li>Each business's own logo and colours on every quote, invoice and PDF</li>
-          <li>Built to be used from a phone, on the job</li>
-        </ul>
-        <div class="inline-links"><a href="https://www.voquota.com/" target="_blank" rel="noopener">voquota.com ↗</a></div>
-      </div>
-    </div>
 
-    <div class="showcase" id="showcase" data-mode="quote">
+      <div class="showcase" id="showcase" data-mode="quote">
       <div class="show-bar">
         <p>See how one job goes from quote to invoice in VoQuota.</p>
         <div class="tabs" role="group" aria-label="Choose document">
@@ -139,93 +155,102 @@
       </div>
       <p class="show-note">A real VoQuota quote and invoice, rebuilt here with an example customer.</p>
     </div>
-  </section>
-
-  <section id="services">
-    <div class="col">
-      <div class="head">
-        <span class="mono">Services</span>
-        <h2>What I can build for you</h2>
-        <p>You don't need to know the technical side. Tell me what's slowing your business down and I'll suggest the simplest thing that fixes it.</p>
-      </div>
-      <ul class="rows">
-        <li><h3>Web apps and internal tools</h3><p>Customer portals, dashboards, booking and quoting systems, or a full product like VoQuota.<span class="for">Good for replacing spreadsheets, automating admin, or launching an idea.</span></p></li>
-        <li><h3>Integrations and automation</h3><p>Connecting the tools you already use, such as accounting, bookings, email and spreadsheets, so information moves on its own.<span class="for">Good for cutting repetitive data entry and keeping systems in sync.</span></p></li>
-        <li><h3>Hosting, security and upkeep</h3><p>Setting your software up to stay online, secure and backed up, using what I learned running cloud systems at Virgin Media O2.<span class="for">Good for peace of mind after launch, or moving to the cloud.</span></p></li>
-      </ul>
     </div>
   </section>
 
-  <section id="process">
-    <div class="col">
-      <div class="head">
-        <span class="mono">How it works</span>
-        <h2>Working together</h2>
-      </div>
-      <ul class="rows">
-        <li><h3><span class="n">1</span>A first chat</h3><p>You tell me about your business and what you need. It's free and there's no obligation.</p></li>
-        <li><h3><span class="n">2</span>A clear plan</h3><p>I send a plan in plain English, with a fixed price and a timeline.</p></li>
-        <li><h3><span class="n">3</span>The build</h3><p>You see regular progress and can give feedback as it comes together.</p></li>
-        <li><h3><span class="n">4</span>Launch and support</h3><p>I put it live, show you how it works and stay on hand for changes.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="col">
-      <div class="head">
-        <span class="mono">About</span>
-        <h2>Experience and education</h2>
-      </div>
-      <div class="entry">
-        <span class="mono">Jul 2025 to Aug 2026</span>
-        <div>
-          <h3>Cloud Engineer Intern</h3>
-          <p class="org">Virgin Media O2 · 13-month placement</p>
-          <ul>
-            <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
-            <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
-            <li>Kept systems secure by managing access, networks and certificates.</li>
-            <li>Worked in agile teams and wrote the documentation others relied on.</li>
-          </ul>
+  <section id="services" class="band">
+    <div class="wrap">
+      <div class="split">
+        <div class="label"><span class="mono">Services</span></div>
+        <div class="content">
+          <div class="head">
+            <h2>What I can build for you</h2>
+            <p>You don't need to know the technical side. Tell me what's slowing your business down and I'll suggest the simplest thing that fixes it.</p>
+          </div>
+          <div class="services">
+            <article><h3>Web apps and internal tools</h3><p>Customer portals, dashboards, booking and quoting systems, or a full product like VoQuota.</p><p class="for">For replacing spreadsheets, automating admin, or launching an idea.</p></article>
+            <article><h3>Integrations and automation</h3><p>Connecting the tools you already use, such as accounting, bookings, email and spreadsheets, so information moves on its own.</p><p class="for">For cutting repetitive data entry and keeping systems in sync.</p></article>
+            <article><h3>Hosting, security and upkeep</h3><p>Setting your software up to stay online, secure and backed up, using what I learned running cloud systems at Virgin Media O2.</p><p class="for">For peace of mind after launch, or moving to the cloud.</p></article>
+          </div>
         </div>
       </div>
-      <div class="entry">
-        <span class="mono">2023 to 2027</span>
-        <div>
-          <h3>BSc Computer Science (Hons)</h3>
-          <p class="org">University of Reading · with Industrial Placement</p>
-          <ul>
-            <li>Software design, databases, algorithms, networking and operating systems.</li>
-            <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
-          </ul>
-        </div>
-      </div>
-      <dl class="skills">
-        <dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd>
-        <dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd>
-        <dt>Tooling</dt><dd>Git, GitLab CI/CD, Linux, Agile</dd>
-      </dl>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="col contact">
-      <h2>Have something in mind? Send me a few lines about your business and what you'd like built.</h2>
-      <p>I'll reply to set up a short call.</p>
-      <div class="email">
-        <code id="email">zackaryb241@gmail.com</code>
-        <button class="btn primary" id="copy" type="button">Copy email</button>
-        <a class="btn" href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  <section id="process" class="band">
+    <div class="wrap">
+      <div class="split">
+        <div class="label"><span class="mono">How it works</span></div>
+        <div class="content">
+          <div class="head"><h2>Working together</h2></div>
+          <ol class="steps">
+            <li><span class="n">01</span><h3>A first chat</h3><p>You tell me about your business and what you need. It's free and there's no obligation.</p></li>
+            <li><span class="n">02</span><h3>A clear plan</h3><p>I send a plan in plain English, with a fixed price and a timeline.</p></li>
+            <li><span class="n">03</span><h3>The build</h3><p>You see regular progress and can give feedback as it comes together.</p></li>
+            <li><span class="n">04</span><h3>Launch and support</h3><p>I put it live, show you how it works and stay on hand for changes.</p></li>
+          </ol>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section id="about" class="band">
+    <div class="wrap">
+      <div class="split">
+        <div class="label"><span class="mono">About</span></div>
+        <div class="content">
+          <div class="head"><h2>Experience and education</h2></div>
+          <div>
+            <article class="entry">
+              <header><h3>Cloud Engineer Intern</h3><span class="mono">Jul 2025 to Aug 2026</span></header>
+              <p class="org">Virgin Media O2 · 13-month placement</p>
+              <ul>
+                <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
+                <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
+                <li>Kept systems secure by managing access, networks and certificates.</li>
+                <li>Worked in agile teams and wrote the documentation others relied on.</li>
+              </ul>
+            </article>
+            <article class="entry">
+              <header><h3>BSc Computer Science (Hons)</h3><span class="mono">2023 to 2027</span></header>
+              <p class="org">University of Reading · with Industrial Placement</p>
+              <ul>
+                <li>Software design, databases, algorithms, networking and operating systems.</li>
+                <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
+              </ul>
+            </article>
+          </div>
+          <dl class="skills">
+            <dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd>
+            <dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd>
+            <dt>Tooling</dt><dd>Git, GitLab CI/CD, Linux, Agile</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="split">
+        <div class="label"><span class="mono">Contact</span></div>
+        <div class="content">
+          <h2>Have something in mind? Send me a few lines about your business.</h2>
+          <p>Tell me what you'd like built, or what's taking up too much of your time. I'll reply to set up a short call.</p>
+          <div class="email">
+            <code id="email">zackaryb241@gmail.com</code>
+            <button class="btn primary" id="copy" type="button">Copy email</button>
+            <a class="btn" href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <span>© <span id="year">2026</span> Zackary Boudekak · Reading, UK</span>
+        <span>Designed and built by me. <a href="https://github.com/Zackary142/portfolio" target="_blank" rel="noopener">Source on GitHub</a></span>
+      </footer>
     </div>
   </section>
 </main>
-
-<footer>
-  <span>© <span id="year">2026</span> Zackary Boudekak</span>
-  <span>Reading, UK</span>
-</footer>
 
 <script src="assets/main.js"></script>
 </body>
