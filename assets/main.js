@@ -16,13 +16,5 @@ document.getElementById('copy').addEventListener('click', function(){
   document.getElementById('convert').addEventListener('click',function(){set('invoice')});
 })();
 
-// highlight current section in the menu
-(function(){
-  var links=[].slice.call(document.querySelectorAll('.links a'));
-  if(!('IntersectionObserver' in window))return;
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
-  ['services','work','process','about'].forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
-})();
-
 // keep the footer year current
 document.getElementById('year').textContent=new Date().getFullYear();
