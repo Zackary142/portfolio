@@ -1,4 +1,4 @@
-/* Layout: a two-column page grid (section label | content) inside full-width bands; the VoQuota demo and the contact block get their own bands for rhythm */
+/* Layout: one shared two-column grid (label | content) for every block, so all text starts on the same edge; whitespace separates sections, colour bands mark the two key moments */
 :root{
   --paper:#FBFBF9; --ink:#17191C; --muted:#62666D; --rule:#E2E2DD; --raised:#FFFFFF;
   --accent:#0B4F7C; --accent-ink:#FFFFFF; --wash:#EEF1F2; --ok:#1E7A52;
@@ -33,13 +33,13 @@ p{margin:0}
 /* page grid */
 .wrap{max-width:calc(var(--wide) + 40px);margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
 .split{display:grid;grid-template-columns:var(--label) minmax(0,var(--measure));gap:24px 40px}
-.split > .label{padding-top:.35em}
+.split > .label{padding-top:.5em}
 .split > .label .mono{position:sticky;top:24px;display:block}
 .content{min-width:0;display:grid;gap:18px;align-content:start}
 @media (max-width:860px){.split{grid-template-columns:minmax(0,1fr);gap:10px}}
 
 /* top line */
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px 24px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--rule)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px 24px;flex-wrap:wrap;padding-block:26px}
 .brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;flex-wrap:wrap}
 .brand b{font-weight:600}
 .brand span{color:var(--muted);font-size:.92rem}
@@ -49,21 +49,26 @@ p{margin:0}
 .top nav a.btn{color:var(--accent-ink)}
 
 /* opening */
-.opening{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:40px 64px;align-items:end;padding-block:88px 72px}
+.opening{padding-block:80px 104px}
+.opening .label .mono{position:static}
 .opening h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.08;font-weight:500;letter-spacing:-.03em}
 .opening h1 em{font-style:normal;color:var(--accent)}
-.opening .lede{color:var(--muted);font-size:1.12rem;max-width:56ch;margin-top:24px}
+.opening .lede{color:var(--muted);font-size:1.12rem;max-width:56ch;margin-top:26px}
 .opening .lede a{color:var(--ink)}
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-.cv{display:grid;margin:0;padding:0;border-top:1px solid var(--ink)}
-.cv div{display:grid;grid-template-columns:7.5rem 1fr;gap:12px;padding-block:12px;border-bottom:1px solid var(--rule)}
-.cv dt{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-top:.2em}
-.cv dd{margin:0;line-height:1.4}
-.cv dd span{display:block;color:var(--muted);font-size:.92rem}
-@media (max-width:860px){.opening{grid-template-columns:minmax(0,1fr);padding-block:56px 48px}}
+.cv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px;margin:64px 0 0;padding:0}
+.cv div{display:grid;gap:4px;align-content:start}
+.cv dt{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.cv dd{margin:0;line-height:1.4;font-weight:500}
+.cv dd span{display:block;color:var(--muted);font-size:.95rem;font-weight:400}
+@media (max-width:860px){.opening{padding-block:48px 72px}}
+@media (max-width:480px){.cv{grid-template-columns:minmax(0,1fr)}}
 
 /* bands */
-.band{padding-block:72px;border-top:1px solid var(--rule)}
+.band{padding-block:104px 8px}
+.band.tint{padding-block:96px}
+.band.tint + .band{padding-top:104px}
+@media (max-width:860px){.band{padding-block:72px 0}.band.tint{padding-block:64px}}
 .band.tint{background:var(--wash)}
 .head h2{font-size:clamp(1.5rem,3vw,1.9rem);line-height:1.2;letter-spacing:-.02em}
 .head p{color:var(--muted);max-width:60ch;margin-top:10px}
@@ -71,7 +76,7 @@ p{margin:0}
 /* work */
 .work-text{display:grid;gap:16px}
 .work-text p{max-width:62ch}
-.facts{display:flex;flex-wrap:wrap;gap:8px 28px;padding:14px 0;border-block:1px solid var(--rule);margin:4px 0}
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin:8px 0}
 .facts div{display:grid;gap:2px}
 .facts b{font-weight:600}
 .work-text ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
@@ -147,17 +152,17 @@ p{margin:0}
 }
 
 /* services: three columns that stack */
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--ink);padding-top:22px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:8px}
 .services article{display:grid;gap:10px;align-content:start}
 .services h3{font-size:1.05rem;line-height:1.35}
 .services p{color:var(--muted);font-size:.98rem}
-.services .for{color:var(--ink);font-size:.92rem;padding-top:10px;border-top:1px solid var(--rule)}
+.services .for{color:var(--ink);font-size:.92rem}
 @media (max-width:760px){.services{grid-template-columns:minmax(0,1fr)}}
 
 /* process: numbered because it is a sequence */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
 .steps li{display:grid;gap:8px;align-content:start}
-.steps .n{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.steps .n{font-family:var(--mono);font-size:.78rem;color:var(--accent)}
 .steps h3{font-size:1rem}
 .steps p{color:var(--muted);font-size:.95rem}
 @media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -165,13 +170,13 @@ p{margin:0}
 
 /* experience */
 .entry{display:grid;gap:4px;padding-bottom:26px}
-.entry + .entry{padding-top:26px;border-top:1px solid var(--rule)}
+.entry + .entry{padding-top:8px}
 .entry header{display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap}
 .entry h3{font-size:1.08rem;line-height:1.4}
 .entry .org{color:var(--muted)}
 .entry ul{margin:10px 0 0;padding-left:1.1em;display:grid;gap:6px}
 .entry ul li::marker{color:var(--muted)}
-.skills{display:grid;grid-template-columns:7.5rem 1fr;gap:8px 18px;margin:0;padding-top:22px;border-top:1px solid var(--ink)}
+.skills{display:grid;grid-template-columns:7.5rem 1fr;gap:8px 18px;margin:12px 0 0;padding:0}
 .skills dt{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-top:.2em}
 .skills dd{margin:0}
 @media (max-width:520px){.skills{grid-template-columns:minmax(0,1fr);gap:0}.skills dd{margin-bottom:10px}}
@@ -183,7 +188,8 @@ p{margin:0}
 .btn.small{padding:7px 14px;font-size:.9rem}
 
 /* contact band */
-.contact{background:var(--band);color:var(--band-ink);padding-block:88px 40px}
+.contact{background:var(--band);color:var(--band-ink);padding-block:104px 36px;margin-top:104px}
+@media (max-width:860px){.contact{padding-block:72px 32px;margin-top:72px}}
 .contact .mono{color:var(--band-muted)}
 .contact h2{font-size:clamp(1.8rem,4.4vw,2.8rem);line-height:1.12;font-weight:500;letter-spacing:-.03em;max-width:20ch}
 .contact p{color:var(--band-muted);max-width:52ch}
