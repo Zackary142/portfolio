@@ -2,7 +2,7 @@
 
 The source for my personal portfolio. I'm a software engineer in Reading, UK, in my final year of BSc Computer Science (Hons) at the University of Reading, co-founder of [VoQuota](https://www.voquota.com/), and formerly a Cloud Engineer Intern at Virgin Media O2.
 
-## What's i## What's in it
+## What's in it
 
 A single, dependency-free static page with my intro pinned on the left and the rest scrolling on the right:
 
@@ -12,7 +12,7 @@ A single, dependency-free static page with my intro pinned on the left and the r
 
 It supports light and dark mode, works down to phone width, and respects reduced-motion settings.
 
-e
+## Structure
 
 ```
 index.html          the page
