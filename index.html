@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zackary Boudekak</title>
-<meta name="description" content="Freelance software engineer in Reading, UK. Co-founder of VoQuota, previously a cloud engineering intern at Virgin Media O2. Web apps, internal tools, integrations and hosting.">
+<meta name="description" content="Software engineer and final-year Computer Science student at the University of Reading. Co-founder of VoQuota, previously a cloud engineering intern at Virgin Media O2.">
 <meta name="author" content="Zackary Boudekak">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Zackary Boudekak, freelance software engineer">
-<meta property="og:description" content="I build custom software that takes the stress out of running a business.">
+<meta property="og:title" content="Zackary Boudekak, software engineer">
+<meta property="og:description" content="Software engineer in Reading. Co-founder of VoQuota, previously cloud engineering at Virgin Media O2.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0B4F7C">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -17,67 +17,50 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="layout-side">
 
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="#top"><b>Zackary Boudekak</b></a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="btn primary small" href="#contact">Start a project</a>
-    </nav>
-  </header>
-</div>
-
-<main id="top">
-  <div class="wrap">
-    <div class="opening split">
-      <div class="label"><span class="mono">Freelance · Reading, UK</span></div>
-      <div class="content">
-        <h1>I build custom software that takes the stress out of running a business.</h1>
-        <p class="lede">I'm a software engineer in Reading, taking on freelance work alongside the final year of my degree. Most of what I build is the unglamorous, useful kind: tools that replace a spreadsheet, connect two systems that don't talk, or turn an hour of admin into a button. The best example is <a href="#work">VoQuota</a>, which I co-founded.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Tell me about your project</a>
-          <a class="btn" href="#work">See VoQuota in action</a>
-        </div>
-        <dl class="cv">
-          <div><dt>Now</dt><dd>Freelance software engineer<span>Open to new projects</span></dd></div>
-          <div><dt>Co-founder</dt><dd>VoQuota<span>Quoting and invoicing for tradespeople</span></dd></div>
-          <div><dt>2025 to 2026</dt><dd>Cloud Engineer Intern<span>Virgin Media O2, 13 months</span></dd></div>
-          <div><dt>2023 to 2027</dt><dd>BSc Computer Science (Hons)<span>University of Reading</span></dd></div>
-        </dl>
-      </div>
+<div class="shell">
+  <aside class="intro">
+    <div class="intro-inner">
+      <a class="name" href="#top">Zackary Boudekak</a>
+      <p class="role">Software engineer</p>
+      <p class="bio">Final-year Computer Science (Hons) student at the University of Reading. I spent 13 months on cloud engineering at Virgin Media O2, and I co-founded VoQuota, a quoting and invoicing app for tradespeople.</p>
+      <nav class="toc" aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="#contact">Email</a></li>
+      </ul>
     </div>
-  </div>
+  </aside>
 
-  <section id="work" class="band tint">
-    <div class="wrap">
-      <div class="split">
-        <div class="label"><span class="mono">Selected work</span></div>
-        <div class="content">
-          <div class="head"><h2>VoQuota: quotes and invoices for tradespeople</h2></div>
-          <div class="work-text">
-            <p>Tradespeople lose jobs when quoting takes too long. Writing them in Word or a spreadsheet after a full day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it to the customer, and turn it into an invoice with one click once it's accepted.</p>
-            <p>I co-founded it with a fellow software engineering intern at Virgin Media O2. We designed, built and launched it between the two of us.</p>
-            <div class="facts">
-              <div><span class="mono">Role</span><b>Co-founder, engineer</b></div>
-              <div><span class="mono">Status</span><b>Live</b></div>
-              <div><span class="mono">Plan</span><b>£24.99 a month</b></div>
-            </div>
-            <ul>
-              <li>A quote builder that adds up labour, materials and extras</li>
-              <li>A customer page to accept or decline a quote, with no account needed</li>
-              <li>Each business's own logo and colours on every quote, invoice and PDF</li>
-              <li>Built to be used from a phone, on the job</li>
-            </ul>
-            <div class="inline-links"><a href="https://www.voquota.com/" target="_blank" rel="noopener">Visit voquota.com ↗</a></div>
+  <main id="top">
+    <section id="projects" class="block">
+      <h2 class="label">Projects</h2>
+
+      <article class="project featured">
+        <header class="p-head">
+          <div>
+            <h3>VoQuota</h3>
+            <p class="sub">Quoting and invoicing for tradespeople</p>
           </div>
-        </div>
-      </div>
-
-      <div class="showcase" id="showcase" data-mode="quote">
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Co-founder, engineer</dd></div>
+            <div><dt>Status</dt><dd>Live</dd></div>
+          </dl>
+        </header>
+        <p>Tradespeople lose jobs when quoting takes too long, and writing quotes in Word after a day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it, and turn it into an invoice with one click once the customer accepts. I co-founded it with a fellow software engineering intern from Virgin Media O2, and we designed, built and launched it between the two of us.</p>
+        <ul class="points">
+          <li>Quote builder that totals labour, materials and extras, with VAT</li>
+          <li>Customer page to accept or decline, with no account needed</li>
+          <li>Each business's own branding on every quote, invoice and PDF</li>
+        </ul>
+        <p class="go"><a href="https://www.voquota.com/" target="_blank" rel="noopener">voquota.com ↗</a></p>
+        <div class="showcase" id="showcase" data-mode="quote">
       <div class="show-bar">
         <p>See how one job goes from quote to invoice in VoQuota.</p>
         <div class="tabs" role="group" aria-label="Choose document">
@@ -156,102 +139,95 @@
       </div>
       <p class="show-note">A real VoQuota quote and invoice, rebuilt here with an example customer.</p>
     </div>
-    </div>
-  </section>
+      </article>
 
-  <section id="services" class="band">
-    <div class="wrap">
-      <div class="split">
-        <div class="label"><span class="mono">Services</span></div>
-        <div class="content">
-          <div class="head">
-            <h2>What I can build for you</h2>
-            <p>You don't need to know the technical side. Tell me what's slowing your business down and I'll suggest the simplest thing that fixes it.</p>
-          </div>
-          <div class="services">
-            <article><h3>Web apps and internal tools</h3><p>Customer portals, dashboards, booking and quoting systems, or a full product like VoQuota.</p><p class="for">For replacing spreadsheets, automating admin, or launching an idea.</p></article>
-            <article><h3>Integrations and automation</h3><p>Connecting the tools you already use, such as accounting, bookings, email and spreadsheets, so information moves on its own.</p><p class="for">For cutting repetitive data entry and keeping systems in sync.</p></article>
-            <article><h3>Hosting, security and upkeep</h3><p>Setting your software up to stay online, secure and backed up, using what I learned running cloud systems at Virgin Media O2.</p><p class="for">For peace of mind after launch, or moving to the cloud.</p></article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="process" class="band">
-    <div class="wrap">
-      <div class="split">
-        <div class="label"><span class="mono">How it works</span></div>
-        <div class="content">
-          <div class="head"><h2>Working together</h2></div>
-          <ol class="steps">
-            <li><span class="n">01</span><h3>A first chat</h3><p>You tell me about your business and what you need. It's free and there's no obligation.</p></li>
-            <li><span class="n">02</span><h3>A clear plan</h3><p>I send a plan in plain English, with a fixed price and a timeline.</p></li>
-            <li><span class="n">03</span><h3>The build</h3><p>You see regular progress and can give feedback as it comes together.</p></li>
-            <li><span class="n">04</span><h3>Launch and support</h3><p>I put it live, show you how it works and stay on hand for changes.</p></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="band">
-    <div class="wrap">
-      <div class="split">
-        <div class="label"><span class="mono">About</span></div>
-        <div class="content">
-          <div class="head"><h2>Experience and education</h2></div>
+      <article class="project">
+        <header class="p-head">
           <div>
-            <article class="entry">
-              <header><h3>Cloud Engineer Intern</h3><span class="mono">Jul 2025 to Aug 2026</span></header>
-              <p class="org">Virgin Media O2 · 13-month placement</p>
-              <ul>
-                <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
-                <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
-                <li>Kept systems secure by managing access, networks and certificates.</li>
-                <li>Worked in agile teams and wrote the documentation others relied on.</li>
-              </ul>
-            </article>
-            <article class="entry">
-              <header><h3>BSc Computer Science (Hons)</h3><span class="mono">2023 to 2027</span></header>
-              <p class="org">University of Reading · with Industrial Placement</p>
-              <ul>
-                <li>Software design, databases, algorithms, networking and operating systems.</li>
-                <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
-              </ul>
-            </article>
+            <h3>ForkLine</h3>
+            <p class="sub">Software studio site and client workspace</p>
           </div>
-          <dl class="skills">
-            <dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd>
-            <dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd>
-            <dt>Tooling</dt><dd>Git, GitLab CI/CD, Linux, Agile</dd>
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Founder</dd></div>
+            <div><dt>Status</dt><dd>In development</dd></div>
           </dl>
-        </div>
-      </div>
-    </div>
-  </section>
+        </header>
+        <p>The home-to-be of my freelance studio. Clients sign in to a workspace where each project lives in its own private repository, so they can follow every change from scoping to launch. Engineers only see the projects they're assigned to.</p>
+      </article>
 
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <div class="split">
-        <div class="label"><span class="mono">Contact</span></div>
-        <div class="content">
-          <h2>Have something in mind? Send me a few lines about your business.</h2>
-          <p>Tell me what you'd like built, or what's taking up too much of your time. I'll reply to set up a short call.</p>
-          <div class="email">
-            <code id="email">zackaryb241@gmail.com</code>
-            <button class="btn primary" id="copy" type="button">Copy email</button>
-            <a class="btn" href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <article class="project">
+        <header class="p-head">
+          <div>
+            <h3>Moving a business system to Google Cloud</h3>
+            <p class="sub">Virgin Media O2 · placement project</p>
           </div>
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Project lead</dd></div>
+            <div><dt>When</dt><dd>2025 to 2026</dd></div>
+          </dl>
+        </header>
+        <p>During my placement I led the migration of a major business system onto Google Cloud, from the initial design through to go-live, working with the team that owned it and documenting the new setup for the people who'd run it after me.</p>
+        <ul class="tags"><li>Google Cloud</li><li>Cloud migration</li><li>Documentation</li></ul>
+      </article>
+    </section>
+
+    <section id="experience" class="block">
+      <h2 class="label">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">Jul 2025 to Aug 2026</span>
+          <div>
+            <h3>Cloud Engineer Intern</h3>
+            <p class="org">Virgin Media O2 · 13-month placement</p>
+            <ul class="points">
+              <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
+              <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
+              <li>Kept systems secure by managing access, networks and certificates.</li>
+              <li>Worked in agile teams and wrote the documentation others relied on.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="when">2023 to 2027</span>
+          <div>
+            <h3>BSc Computer Science (Hons)</h3>
+            <p class="org">University of Reading · with Industrial Placement</p>
+            <ul class="points">
+              <li>Software design, databases, algorithms, networking and operating systems.</li>
+              <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="block">
+      <h2 class="label">Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd></div>
+        <div><dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd></div>
+        <div><dt>Tooling</dt><dd>Git, GitLab CI/CD, Linux, Agile</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="block">
+      <h2 class="label">Contact</h2>
+      <div class="contact">
+        <p>I'm happy to talk about graduate roles, projects or anything on this page.</p>
+        <div class="email">
+          <code id="email">zackaryb241@gmail.com</code>
+          <button class="btn" id="copy" type="button">Copy email</button>
         </div>
+        <p class="aside">Looking to hire for a project? That happens through ForkLine, my freelance studio.</p>
       </div>
-      <footer>
-        <span>© <span id="year">2026</span> Zackary Boudekak · Reading, UK</span>
-        <span>Freelance software engineer</span>
-      </footer>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <footer>
+      <span>© <span id="year">2026</span> Zackary Boudekak</span>
+      <span>Reading, UK</span>
+    </footer>
+  </main>
+</div>
 
 <script src="assets/main.js"></script>
 </body>
