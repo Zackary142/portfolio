@@ -6,7 +6,7 @@ The source for my personal portfolio. I'm a software engineer in Reading, UK, in
 
 A single, dependency-free static page with my intro pinned on the left and the rest scrolling on the right:
 
-- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), ForkLine, and a Google Cloud migration from my Virgin Media O2 placement
+- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
 - **Experience:** placement and degree
 - **Skills** and **Contact**
 
