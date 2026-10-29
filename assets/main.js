@@ -1,7 +1,7 @@
 // copy email to clipboard, falling back to selecting it
 document.getElementById('copy').addEventListener('click', function(){
   var btn=this, el=document.getElementById('email');
-  function done(){btn.textContent='Copied!';setTimeout(function(){btn.textContent='Copy email'},1600)}
+  function done(){btn.textContent='Copied!';setTimeout(function(){btn.textContent='Copy'},1600)}
   function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C'}
   try{navigator.clipboard.writeText(el.textContent).then(done,fallback)}catch(e){fallback()}
 });
