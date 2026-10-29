@@ -18,7 +18,7 @@ It supports light and dark mode, works down to phone width, and respects reduced
 index.html                   the page
 assets/styles.css            all styling (colour tokens at the top)
 assets/main.js               quote/invoice switcher, contents highlighting, copy-email button
-assets/favicon.svg           site icon and logo
+assets/favicon.svg           site icon (browser tab and search results)
 assets/apple-touch-icon.png  icon for iPhone home screens
 ```
 
