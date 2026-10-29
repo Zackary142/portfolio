@@ -1,6 +1,6 @@
 # Zackary Boudekak · Portfolio
 
-The source for my personal portfolio. I'm a software engineer in Reading, UK, in my final year of BSc Computer Science (Hons) at the University of Reading, co-founder of [VoQuota](https://www.voquota.com/), and formerly a Cloud Engineer Intern at Virgin Media O2.
+The source for my personal portfolio. I'm a software and cloud engineer in Reading, UK, in my final year of BSc Computer Science (Hons) at the University of Reading, co-founder of [VoQuota](https://www.voquota.com/), and formerly a Cloud Engineer Intern at Virgin Media O2.
 
 ## What's in it
 
