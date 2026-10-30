@@ -147,24 +147,25 @@
         <header class="p-head">
           <div>
             <h3>Job Application Tracker</h3>
-            <p class="sub">A serverless app on AWS, built and deployed entirely as code</p>
+            <p class="sub">A serverless app on AWS with sign-in, built and deployed entirely as code</p>
           </div>
           <dl class="meta">
             <div><dt>Role</dt><dd>Solo project</dd></div>
-            <div><dt>Status</dt><dd>Public repo</dd></div>
+            <div><dt>Status</dt><dd>Live</dd></div>
           </dl>
         </header>
-        <p>A small app I use to track my job applications: company, role, status, date and notes. The app is simple on purpose. The real work is everything around it: infrastructure as code, a CI/CD pipeline, and deploying to AWS without storing a single access key.</p>
+        <p>A small app I use to track my job applications: company, role, status, date and notes. You sign up with your email and only ever see your own applications. The app is simple on purpose. The real work is everything around it: infrastructure as code, a CI/CD pipeline, and deploying to AWS without storing a single access key.</p>
         <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
         <ul class="points">
-          <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs nothing while idle</li>
+          <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
+          <li>Sign-in through Cognito, with API Gateway checking the token before any code runs, and every record keyed by the user id from that verified token</li>
           <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
           <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
-          <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge</li>
+          <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
           <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
         </ul>
-        <ul class="tags"><li>Python</li><li>FastAPI</li><li>AWS Lambda</li><li>DynamoDB</li><li>CloudFront</li><li>Terraform</li><li>GitHub Actions</li></ul>
-        <p class="go"><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>CloudFront</li><li>Terraform</li><li>GitHub Actions</li></ul>
+        <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
       </article>
 
       <article class="project">

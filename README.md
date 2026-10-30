@@ -6,7 +6,7 @@ The source for my personal portfolio. I'm a software and cloud engineer in Readi
 
 A single, dependency-free static page with my intro pinned on the left and the rest scrolling on the right:
 
-- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), a serverless Job Application Tracker on AWS, Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
+- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), a serverless Job Application Tracker on AWS (with Cognito sign-in), Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
 - **Experience:** placement and degree
 - **Skills** and **Contact**
 
