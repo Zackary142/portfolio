@@ -154,7 +154,7 @@
             <div><dt>Status</dt><dd>Live</dd></div>
           </dl>
         </header>
-        <p>A small app I use to track my job applications: company, role, status, date and notes. You sign up with your email and only ever see your own applications. The app is simple on purpose. The real work is everything around it: infrastructure as code, a CI/CD pipeline, and deploying to AWS without storing a single access key.</p>
+        <p>I built this to keep track of my own job applications: company, role, status, date and notes. You sign up with your email and only see your own applications. The app itself is deliberately basic. The part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
         <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
         <ul class="points">
           <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
