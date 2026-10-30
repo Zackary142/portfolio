@@ -6,7 +6,7 @@ The source for my personal portfolio. I'm a software and cloud engineer in Readi
 
 A single, dependency-free static page with my intro pinned on the left and the rest scrolling on the right:
 
-- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
+- **Projects:** VoQuota (with an interactive quote-to-invoice demo rebuilt in HTML), a serverless Job Application Tracker on AWS, Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
 - **Experience:** placement and degree
 - **Skills** and **Contact**
 
@@ -19,6 +19,7 @@ index.html                   the page
 assets/styles.css            all styling (colour tokens at the top)
 assets/main.js               quote/invoice switcher, contents highlighting, copy-email button
 assets/favicon.svg           site icon (browser tab and search results)
+assets/job-tracker.webp      Job Application Tracker screenshot
 assets/apple-touch-icon.png  icon for iPhone home screens
 ```
 

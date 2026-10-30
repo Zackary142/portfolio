@@ -146,6 +146,30 @@
       <article class="project">
         <header class="p-head">
           <div>
+            <h3>Job Application Tracker</h3>
+            <p class="sub">A serverless app on AWS, built and deployed entirely as code</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Solo project</dd></div>
+            <div><dt>Status</dt><dd>Public repo</dd></div>
+          </dl>
+        </header>
+        <p>A small app I use to track my job applications: company, role, status, date and notes. The app is simple on purpose. The real work is everything around it: infrastructure as code, a CI/CD pipeline, and deploying to AWS without storing a single access key.</p>
+        <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
+        <ul class="points">
+          <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs nothing while idle</li>
+          <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
+          <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
+          <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge</li>
+          <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>AWS Lambda</li><li>DynamoDB</li><li>CloudFront</li><li>Terraform</li><li>GitHub Actions</li></ul>
+        <p class="go"><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+      </article>
+
+      <article class="project">
+        <header class="p-head">
+          <div>
             <h3>Patchwick</h3>
             <p class="sub">Software studio site and client workspace</p>
           </div>
@@ -209,7 +233,7 @@
       <dl class="skills">
         <div><dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd></div>
         <div><dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd></div>
-        <div><dt>Tooling</dt><dd>Git, GitLab CI/CD, Linux, Agile</dd></div>
+        <div><dt>Tooling</dt><dd>Git, GitHub Actions, GitLab CI/CD, Linux, Agile</dd></div>
       </dl>
     </section>
 

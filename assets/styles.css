@@ -134,6 +134,8 @@ ul,ol,dl{margin:0;padding:0}
 .tags li{font-family:var(--mono);font-size:.76rem;color:var(--muted);border:1px solid var(--rule);border-radius:4px;padding:3px 8px}
 .go a{color:var(--accent);font-weight:500;text-decoration:none}
 .go a:hover{text-decoration:underline}
+.shot{margin:4px 0 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#F6F6F6}
+.shot img{display:block;width:100%;height:auto}
 .go .dev{font-family:var(--mono);font-size:.74rem;color:var(--muted);border:1px solid var(--rule);border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:1px}
 
 /* experience */
