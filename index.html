@@ -10,22 +10,32 @@
 <meta property="og:title" content="Zackary Boudekak, software and cloud engineer">
 <meta property="og:description" content="Software and cloud engineer in Reading. Co-founder of VoQuota, previously cloud engineering at Virgin Media O2.">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0B4F7C">
+<meta name="theme-color" content="#0F2231">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="layout-side">
+<body>
 
 <div class="shell">
-  <aside class="intro">
-    <div class="intro-inner">
-      <a class="name" href="#top">Zackary Boudekak</a>
-      <p class="role">Software &amp; cloud engineer</p>
+  <aside class="side">
+    <div class="side-inner">
+      <div>
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0B4F7C"/><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"><path stroke="#7DB6DC" d="M21 15q-5 0-5 5v6q0 6-5 6q5 0 5 6v6q0 5 5 5"/><path stroke="#7DB6DC" d="M43 15q5 0 5 5v6q0 6 5 6q-5 0-5 6v6q0 5-5 5"/><path stroke="#fff" stroke-width="5" d="M26 25h12L26 39h12"/></g></svg>
+      </div>
+      <div>
+        <a class="name" href="#top">Zackary Boudekak</a>
+        <p class="role">Software &amp; cloud engineer</p>
+      </div>
       <p class="bio">Final-year Computer Science (Hons) student at the University of Reading. I spent 13 months on cloud engineering at Virgin Media O2, and I co-founded VoQuota, a quoting and invoicing app for tradespeople.</p>
+      <dl class="now">
+        <div><dt>Now</dt><dd>Final year, BSc Computer Science (Hons)</dd></div>
+        <div><dt>Before</dt><dd>Cloud Engineer Intern, Virgin Media O2</dd></div>
+        <div><dt>Building</dt><dd>VoQuota and Patchwick</dd></div>
+      </dl>
       <nav class="toc" aria-label="Sections">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
@@ -41,28 +51,29 @@
   </aside>
 
   <main id="top">
-    <section id="projects" class="block">
-      <h2 class="label">Projects</h2>
+    <section id="projects" class="sec">
+      <header class="sec-head">
+        <h2>Selected projects</h2>
+        <p>A product I co-founded, a cloud project I built end to end, and the work I led on placement.</p>
+      </header>
 
-      <article class="project featured">
-        <header class="p-head">
-          <div>
-            <h3>VoQuota</h3>
-            <p class="sub">Quoting and invoicing for tradespeople</p>
+      <div class="projects">
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>VoQuota</h3>
+              <p class="sub">Quoting and invoicing for tradespeople</p>
+            </div>
+            <span class="status live">Live</span>
           </div>
-          <dl class="meta">
-            <div><dt>Role</dt><dd>Co-founder, engineer</dd></div>
-            <div><dt>Status</dt><dd>Live</dd></div>
-          </dl>
-        </header>
-        <p>Tradespeople lose jobs when quoting takes too long, and writing quotes in Word after a day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it, and turn it into an invoice with one click once the customer accepts. I co-founded it with a fellow software engineering intern from Virgin Media O2, and we designed, built and launched it between the two of us.</p>
-        <ul class="points">
-          <li>Quote builder that totals labour, materials and extras, with VAT</li>
-          <li>Customer page to accept or decline, with no account needed</li>
-          <li>Each business's own branding on every quote, invoice and PDF</li>
-        </ul>
-        <p class="go"><a href="https://www.voquota.com/" target="_blank" rel="noopener">voquota.com ↗</a></p>
-        <div class="showcase" id="showcase" data-mode="quote">
+          <p class="facts"><span>Role <b>Co-founder, engineer</b></span></p>
+          <p>Tradespeople lose jobs when quoting takes too long, and writing quotes in Word after a day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it, and turn it into an invoice with one click once the customer accepts. I co-founded it with a fellow software engineering intern from Virgin Media O2, and we designed, built and launched it between the two of us.</p>
+          <ul class="points">
+            <li>Quote builder that totals labour, materials and extras, with VAT</li>
+            <li>Customer page to accept or decline, with no account needed</li>
+            <li>Each business's own branding on every quote, invoice and PDF</li>
+          </ul>
+          <div class="showcase" id="showcase" data-mode="quote">
       <div class="show-bar">
         <p>See how one job goes from quote to invoice in VoQuota.</p>
         <div class="tabs" role="group" aria-label="Choose document">
@@ -141,96 +152,89 @@
       </div>
       <p class="show-note">A real VoQuota quote and invoice, rebuilt here with an example customer.</p>
     </div>
-      </article>
+          <p class="go"><a href="https://www.voquota.com/" target="_blank" rel="noopener">Visit voquota.com ↗</a></p>
+        </article>
 
-      <article class="project">
-        <header class="p-head">
-          <div>
-            <h3>Job Application Tracker</h3>
-            <p class="sub">A serverless app on AWS with sign-in, built and deployed entirely as code</p>
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>Job Application Tracker</h3>
+              <p class="sub">A serverless app on AWS with sign-in, built and deployed entirely as code</p>
+            </div>
+            <span class="status live">Live</span>
           </div>
-          <dl class="meta">
-            <div><dt>Role</dt><dd>Solo project</dd></div>
-            <div><dt>Status</dt><dd>Live</dd></div>
-          </dl>
-        </header>
-        <p>I built this to keep track of my own job applications: company, role, status, date and notes. You sign up with your email and only see your own applications. The app itself is deliberately basic. The part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
-        <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
-        <ul class="points">
-          <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
-          <li>Sign-in through Cognito, with API Gateway checking the token before any code runs, and every record keyed by the user id from that verified token</li>
-          <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
-          <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
-          <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
-          <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
-        </ul>
-        <ul class="tags"><li>Python</li><li>FastAPI</li><li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>CloudFront</li><li>Terraform</li><li>GitHub Actions</li></ul>
-        <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
-      </article>
+          <p class="facts"><span>Role <b>Solo project</b></span></p>
+          <p>I built this to keep track of my own job applications: company, role, status, date and notes. You sign up with your email and only see your own applications. The app itself is deliberately basic. The part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
+          <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
+          <ul class="points">
+            <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
+            <li>Sign-in through Cognito, with API Gateway checking the token before any code runs, and every record keyed by the user id from that verified token</li>
+            <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
+            <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
+            <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
+            <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
+          </ul>
+          <p class="stack">Python · FastAPI · AWS Lambda · DynamoDB · Cognito · CloudFront · Terraform · GitHub Actions</p>
+          <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+        </article>
 
-      <article class="project">
-        <header class="p-head">
-          <div>
-            <h3>Patchwick</h3>
-            <p class="sub">Software studio site and client workspace</p>
-          </div>
-          <dl class="meta">
-            <div><dt>Role</dt><dd>Founder</dd></div>
-            <div><dt>Status</dt><dd>In development</dd></div>
-          </dl>
-        </header>
-        <p>The home-to-be of my freelance studio. Clients sign in to a workspace where each project lives in its own private repository, so they can follow every change from scoping to launch.</p>
-        <p class="go"><a href="https://zackary142.github.io/SEAgency/" target="_blank" rel="noopener">View Patchwick ↗</a> <span class="dev">In development</span></p>
-      </article>
+        <div class="pair">
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <h3>Patchwick</h3>
+                <p class="sub">Software studio site and client workspace</p>
+              </div>
+              <span class="status dev">In development</span>
+            </div>
+            <p class="facts"><span>Role <b>Founder</b></span></p>
+            <p>The home-to-be of my freelance studio. Clients sign in to a workspace where each project lives in its own private repository, so they can follow every change from scoping to launch.</p>
+            <p class="go"><a href="https://zackary142.github.io/SEAgency/" target="_blank" rel="noopener">View Patchwick ↗</a></p>
+          </article>
 
-      <article class="project">
-        <header class="p-head">
-          <div>
-            <h3>Moving a business system to Google Cloud</h3>
-            <p class="sub">Virgin Media O2 · placement project</p>
-          </div>
-          <dl class="meta">
-            <div><dt>Role</dt><dd>Project lead</dd></div>
-            <div><dt>When</dt><dd>2025 to 2026</dd></div>
-          </dl>
-        </header>
-        <p>During my placement I led the migration of a major business system onto Google Cloud, from the initial design through to go-live, working with the team that owned it and documenting the new setup for the people who'd run it after me.</p>
-        <ul class="tags"><li>Google Cloud</li><li>Cloud migration</li><li>Documentation</li></ul>
-      </article>
+          <article class="card">
+            <div class="card-top">
+              <div>
+                <h3>Moving a business system to Google Cloud</h3>
+                <p class="sub">Virgin Media O2 · placement project</p>
+              </div>
+            </div>
+            <p class="facts"><span>Role <b>Project lead</b></span><span>When <b>2025 to 2026</b></span></p>
+            <p>During my placement I led the migration of a major business system onto Google Cloud, from the initial design through to go-live, working with the team that owned it and documenting the new setup for the people who'd run it after me.</p>
+            <p class="stack">Google Cloud · Cloud migration · Documentation</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="block">
-      <h2 class="label">Experience</h2>
+    <section id="experience" class="sec">
+      <header class="sec-head"><h2>Experience</h2></header>
       <ol class="timeline">
         <li>
           <span class="when">Jul 2025 to Aug 2026</span>
-          <div>
-            <h3>Cloud Engineer Intern</h3>
-            <p class="org">Virgin Media O2 · 13-month placement</p>
-            <ul class="points">
-              <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
-              <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
-              <li>Kept systems secure by managing access, networks and certificates.</li>
-              <li>Worked in agile teams and wrote the documentation others relied on.</li>
-            </ul>
-          </div>
+          <h3>Cloud Engineer Intern</h3>
+          <p class="org">Virgin Media O2 · 13-month placement</p>
+          <ul class="points">
+            <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
+            <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
+            <li>Kept systems secure by managing access, networks and certificates.</li>
+            <li>Worked in agile teams and wrote the documentation others relied on.</li>
+          </ul>
         </li>
         <li>
           <span class="when">2023 to 2027</span>
-          <div>
-            <h3>BSc Computer Science (Hons)</h3>
-            <p class="org">University of Reading · with Industrial Placement</p>
-            <ul class="points">
-              <li>Software design, databases, algorithms, networking and operating systems.</li>
-              <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
-            </ul>
-          </div>
+          <h3>BSc Computer Science (Hons)</h3>
+          <p class="org">University of Reading · with Industrial Placement</p>
+          <ul class="points">
+            <li>Software design, databases, algorithms, networking and operating systems.</li>
+            <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
+          </ul>
         </li>
       </ol>
     </section>
 
-    <section id="skills" class="block">
-      <h2 class="label">Skills</h2>
+    <section id="skills" class="sec">
+      <header class="sec-head"><h2>Skills</h2></header>
       <dl class="skills">
         <div><dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd></div>
         <div><dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd></div>
@@ -238,10 +242,12 @@
       </dl>
     </section>
 
-    <section id="contact" class="block">
-      <h2 class="label">Contact</h2>
+    <section id="contact" class="sec">
       <div class="contact">
-        <p class="lead">I'm open to graduate roles across software, cloud and infrastructure, and always happy to talk through anything on this page.</p>
+        <header class="sec-head">
+          <h2>Get in touch</h2>
+          <p>I'm open to graduate roles across software, cloud and infrastructure, and always happy to talk through anything on this page.</p>
+        </header>
         <div class="reach">
           <a class="reach-email" href="mailto:hello@zackboudekak.dev" id="email">hello@zackboudekak.dev</a>
           <button class="btn" id="copy" type="button">Copy</button>

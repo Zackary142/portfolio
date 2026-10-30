@@ -10,7 +10,7 @@ A single, dependency-free static page with my intro pinned on the left and the r
 - **Experience:** placement and degree
 - **Skills** and **Contact**
 
-It supports light and dark mode, works down to phone width, and respects reduced-motion settings.
+It works down to phone width, and respects reduced-motion settings.
 
 ## Structure
 
