@@ -24,5 +24,12 @@ document.getElementById('copy').addEventListener('click', function(){
   links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
 })();
 
+// on short screens the panel scrolls with the page until its bottom is in view, then stays put
+(function(){
+  var el=document.querySelector('.side-inner');
+  function fit(){el.style.top=Math.min(0,innerHeight-el.offsetHeight)+'px'}
+  fit();addEventListener('resize',fit);
+})();
+
 // keep the footer year current
 document.getElementById('year').textContent=new Date().getFullYear();

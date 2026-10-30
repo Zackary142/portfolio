@@ -95,9 +95,11 @@ ul,ol{padding:0}
 
 /* identity panel */
 .side{background:var(--side);color:var(--side-ink)}
-.side-inner{position:sticky;top:0;height:100vh;max-width:400px;margin-left:auto;display:flex;flex-direction:column;gap:28px;overflow-y:auto;
+.side-inner{position:sticky;top:0;min-height:100vh;max-width:400px;margin-left:auto;display:flex;flex-direction:column;gap:28px;
   padding-block:56px 40px;padding-left:max(36px,env(safe-area-inset-left,0px));padding-right:36px}
 .mark{width:46px;height:46px;display:block}
+/* a thin scrollbar for the page */
+html{scrollbar-width:thin;scrollbar-color:#BFC4C2 var(--paper)}
 .name{font-family:var(--display);font-stretch:118%;font-weight:700;font-size:clamp(2.2rem,3.3vw,2.75rem);line-height:.98;letter-spacing:-.02em;text-decoration:none;display:block}
 .role{color:var(--side-accent);font-weight:500;margin-top:12px;font-size:1.05rem}
 .bio{color:var(--side-muted);max-width:40ch}
@@ -188,7 +190,7 @@ footer{display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;pa
 /* narrow screens: the panel becomes a header */
 @media (max-width:900px){
   .shell{grid-template-columns:minmax(0,1fr)}
-  .side-inner{position:static;height:auto;max-width:none;margin:0;padding-block:40px 32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .side-inner{position:static;min-height:0;max-width:none;margin:0;padding-block:40px 32px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
   .toc{flex-direction:row;flex-wrap:wrap;gap:6px 18px}
   .toc a::before{display:none}
   main{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-top:16px}
