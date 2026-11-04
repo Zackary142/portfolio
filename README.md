@@ -21,6 +21,7 @@ assets/main.js               VoQuota walkthrough player, scroll reveals, copy-em
 assets/favicon.svg           site icon (browser tab and search results)
 assets/job-tracker.webp      Job Application Tracker screenshot
 assets/patchwick.webp        Patchwick client workspace screenshot
+assets/*-phone.webp          phone-sized versions of both screenshots, used on small screens
 assets/apple-touch-icon.png  icon for iPhone home screens
 ```
 

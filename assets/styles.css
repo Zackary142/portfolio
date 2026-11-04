@@ -312,8 +312,12 @@ details[open] summary{margin-bottom:10px}
   .foot{grid-template-columns:1fr}
   .foot-cols{gap:28px;flex-wrap:wrap}
   .now div{grid-template-columns:76px 1fr}
-  .shot-frame{left:6%;right:-14%;top:22%}
-  .tilt-r{left:-14%;right:6%}
+  /* on phones the tiles show each app's own phone layout in a phone frame */
+  .grid .tile{aspect-ratio:4/4.4}
+  .shot-frame,.tilt-l,.tilt-r{left:50%;right:auto;top:9%;width:66%;border-radius:30px;border:7px solid #111;transform:translateX(-50%) rotate(-2deg)}
+  .tilt-r{transform:translateX(-50%) rotate(2deg)}
+  .work:hover .tilt-l,.work:hover .tilt-r{transform:translateX(-50%)}
+  .mini-bar,.chips{display:none}
   .phases{grid-template-columns:1fr 1fr;row-gap:28px}
   .phases::before{display:none}
 }
