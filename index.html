@@ -10,259 +10,347 @@
 <meta property="og:title" content="Zackary Boudekak, software and cloud engineer">
 <meta property="og:description" content="Software and cloud engineer in Reading. Co-founder of VoQuota, previously cloud engineering at Virgin Media O2.">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0F2231">
+<meta name="theme-color" content="#F2F1EC">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<div class="shell">
-  <aside class="side">
-    <div class="side-inner">
-      <div>
-        <a class="name" href="#top">Zackary Boudekak</a>
-        <p class="role">Software &amp; cloud engineer</p>
-      </div>
-      <p class="bio">Final-year Computer Science (Hons) student at the University of Reading. I spent 13 months on cloud engineering at Virgin Media O2, and I co-founded VoQuota, a quoting and invoicing app for tradespeople.</p>
-      <dl class="now">
-        <div><dt>Now</dt><dd>Final year, BSc Computer Science (Hons)</dd></div>
-        <div><dt>Before</dt><dd>Cloud Engineer Intern, Virgin Media O2</dd></div>
-        <div><dt>Building</dt><dd>VoQuota and Patchwick</dd></div>
-      </dl>
-      <nav class="toc" aria-label="Sections">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-        <li><a href="#contact">Email</a></li>
-        <li><a href="https://www.voquota.com/" target="_blank" rel="noopener">VoQuota ↗</a></li>
-      </ul>
-    </div>
-  </aside>
+<header class="top">
+  <a class="mark" href="#top" aria-label="Zackary Boudekak, back to top">ZB</a>
+  <nav aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main id="top">
-    <section id="projects" class="sec">
-      <header class="sec-head">
-        <h2>Selected projects</h2>
-        <p>A product I co-founded, a cloud project I built end to end, and the work I led on placement.</p>
-      </header>
+<main id="top">
 
-      <div class="projects">
-        <article class="card">
-          <div class="card-top">
-            <div>
-              <h3>VoQuota</h3>
-              <p class="sub">Quoting and invoicing for tradespeople</p>
-            </div>
-            <span class="status live">Live</span>
-          </div>
-          <p class="facts"><span>Role <b>Co-founder, engineer</b></span></p>
-          <p>Tradespeople lose jobs when quoting takes too long, and writing quotes in Word after a day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it, and turn it into an invoice with one click once the customer accepts. I co-founded it with a fellow software engineering intern from Virgin Media O2, and we designed, built and launched it between the two of us.</p>
-          <ul class="points">
-            <li>Quote builder that totals labour, materials and extras, with VAT</li>
-            <li>Customer page to accept or decline, with no account needed</li>
-            <li>Each business's own branding on every quote, invoice and PDF</li>
-          </ul>
-          <div class="showcase" id="showcase" data-mode="quote">
-      <div class="show-bar">
-        <p>See how one job goes from quote to invoice in VoQuota.</p>
-        <div class="tabs" role="group" aria-label="Choose document">
-          <button type="button" id="btn-quote" aria-pressed="true">1. The quote</button>
-          <button type="button" id="btn-invoice" aria-pressed="false">2. The invoice</button>
-        </div>
-      </div>
-      <div class="stage">
-        <aside class="app" aria-label="VoQuota app screen">
-          <div class="panel-quote quo-only">
-            <span class="app-label">In the app</span>
-            <div class="accepted"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor" opacity=".18"/><path d="M6 10.5l2.6 2.6L14 7.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>John Doe accepted quote VQ-Q-000048</div>
-            <p>One click turns the accepted quote into an invoice, with every line carried across.</p>
-            <button class="convert" type="button" id="convert">Convert to invoice</button>
-          </div>
-          <div class="panel-invoice inv-only">
-            <span class="app-label">In the app · before sending</span>
-            <h4>Review Invoice</h4>
-            <div class="who"><b>VQ-I-000023</b><span>John Doe · johndoe@gmail.com</span></div>
-            <div class="app-items">
-              <div class="app-item"><span>EICR</span><span class="q">1 @ £200</span><small>Electrical safety inspection</small></div>
-              <div class="app-item"><span>EV charger installation</span><span class="q">1 @ £1,200</span><small>Install electric vehicle charger</small></div>
-              <div class="app-item"><span>Double socket installation</span><span class="q">3 @ £100</span><small>Install a new double socket</small></div>
-            </div>
-            <div class="app-sum">
-              <div><span>Subtotal</span><span>£1,416.67</span></div>
-              <div><span>Tax (20%)</span><span>£283.33</span></div>
-              <div class="t"><span>Total</span><span>£1,700.00</span></div>
-            </div>
-            <div class="app-actions"><span>Draft</span><span class="go">Send</span></div>
-          </div>
-        </aside>
-
-        <article class="paper" aria-label="Example VoQuota document">
-          <div class="p-top">
-            <div>
-              <div class="p-logo">VQ</div>
-              <div class="p-co">VoQuota LTD</div>
-            </div>
-            <div class="p-dates">
-              <div>Date: 13/10/2026</div>
-              <div class="quo-only">Expiry Date: 12/11/2026</div>
-            </div>
-          </div>
-          <div class="p-title">
-            <b class="quo-only">QUOTE</b><b class="inv-only">INVOICE</b>
-            <span class="quo-only">VQ-Q-000048</span><span class="inv-only">VQ-I-000023</span>
-          </div>
-          <div class="p-parties">
-            <div class="p-box"><b>| BILLED TO</b>John Doe<br>42 High Street<br>Birmingham<br>England<br>B4 7SS<br>johndoe@gmail.com</div>
-            <div class="p-box"><b>| FROM</b>VoQuota LTD<br>zackary.b@voquota.com</div>
-          </div>
-          <table class="p-table">
-            <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Total</th></tr></thead>
-            <tbody>
-              <tr><td>EICR<small>Electrical safety inspection</small></td><td>1</td><td>£200.00</td><td>£200.00</td></tr>
-              <tr><td>EV charger installation<small>Install electric vehicle charger</small></td><td>1</td><td>£1,200.00</td><td>£1,200.00</td></tr>
-              <tr><td>Double socket installation<small>Install a new double socket</small></td><td>3</td><td>£100.00</td><td>£300.00</td></tr>
-            </tbody>
-          </table>
-          <div class="p-totals">
-            <div><span>Subtotal:</span><span>£1,416.67</span></div>
-            <div><span>VAT (20%):</span><span>£283.33</span></div>
-            <div class="t"><span>Total</span><span>£1,700.00</span></div>
-          </div>
-          <div class="p-foot">Generated by VoQuota</div>
-        </article>
-
-        <ul class="notes">
-          <li>Their logo and details<span>Pulled into every document automatically</span></li>
-          <li>Line items with descriptions<span>Saved and reused across jobs</span></li>
-          <li>VAT worked out for them<span>No calculator or spreadsheet needed</span></li>
-          <li class="quo-only">Expiry date set<span>So quotes don't stay open forever</span></li>
-          <li class="inv-only">Same job, new number<span>Invoice created from the accepted quote</span></li>
-        </ul>
-      </div>
-      <p class="show-note">A real VoQuota quote and invoice, rebuilt here with an example customer.</p>
-    </div>
-          <p class="go"><a href="https://www.voquota.com/" target="_blank" rel="noopener">Visit voquota.com ↗</a></p>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <div>
-              <h3>Job Application Tracker</h3>
-              <p class="sub">A serverless app on AWS with sign-in, built and deployed entirely as code</p>
-            </div>
-            <span class="status live">Live</span>
-          </div>
-          <p class="facts"><span>Role <b>Solo project</b></span></p>
-          <p>I built this to keep track of my own job applications: company, role, status, date and notes. You sign up with your email and only see your own applications. The app itself is deliberately basic. The part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
-          <figure class="shot"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></figure>
-          <ul class="points">
-            <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
-            <li>Sign-in through Cognito, with API Gateway checking the token before any code runs, and every record keyed by the user id from that verified token</li>
-            <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
-            <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
-            <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
-            <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
-          </ul>
-          <p class="stack">Python · FastAPI · AWS Lambda · DynamoDB · Cognito · CloudFront · Terraform · GitHub Actions</p>
-          <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
-        </article>
-
-        <div class="pair">
-          <article class="card">
-            <div class="card-top">
-              <div>
-                <h3>Patchwick</h3>
-                <p class="sub">Software studio site and client workspace</p>
-              </div>
-              <span class="status dev">In development</span>
-            </div>
-            <p class="facts"><span>Role <b>Founder</b></span></p>
-            <p>The home-to-be of my freelance studio. Clients sign in to a workspace where each project lives in its own private repository, so they can follow every change from scoping to launch.</p>
-            <p class="go"><a href="https://zackary142.github.io/SEAgency/" target="_blank" rel="noopener">View Patchwick ↗</a></p>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <div>
-                <h3>Moving a business system to Google Cloud</h3>
-                <p class="sub">Virgin Media O2 · placement project</p>
-              </div>
-            </div>
-            <p class="facts"><span>Role <b>Project lead</b></span><span>When <b>2025 to 2026</b></span></p>
-            <p>During my placement I led the migration of a major business system onto Google Cloud, from the initial design through to go-live, working with the team that owned it and documenting the new setup for the people who'd run it after me.</p>
-            <p class="stack">Google Cloud · Cloud migration · Documentation</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="sec">
-      <header class="sec-head"><h2>Experience</h2></header>
-      <ol class="timeline">
-        <li>
-          <span class="when">Jul 2025 to Aug 2026</span>
-          <h3>Cloud Engineer Intern</h3>
-          <p class="org">Virgin Media O2 · 13-month placement</p>
-          <ul class="points">
-            <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
-            <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
-            <li>Kept systems secure by managing access, networks and certificates.</li>
-            <li>Worked in agile teams and wrote the documentation others relied on.</li>
-          </ul>
-        </li>
-        <li>
-          <span class="when">2023 to 2027</span>
-          <h3>BSc Computer Science (Hons)</h3>
-          <p class="org">University of Reading · with Industrial Placement</p>
-          <ul class="points">
-            <li>Software design, databases, algorithms, networking and operating systems.</li>
-            <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <section id="skills" class="sec">
-      <header class="sec-head"><h2>Skills</h2></header>
-      <dl class="skills">
-        <div><dt>Languages</dt><dd>Python, Java, JavaScript, C#/.NET, C/C++, SQL, HTML/CSS</dd></div>
-        <div><dt>Cloud</dt><dd>AWS, Google Cloud, Terraform, Docker, IAM, VPC</dd></div>
-        <div><dt>Tooling</dt><dd>Git, GitHub Actions, GitLab CI/CD, Linux, Agile</dd></div>
-      </dl>
-    </section>
-
-    <section id="contact" class="sec">
-      <div class="contact">
-        <header class="sec-head">
-          <h2>Get in touch</h2>
-          <p>I'm open to graduate roles across software, cloud and infrastructure, and always happy to talk through anything on this page.</p>
-        </header>
-        <div class="reach">
-          <a class="reach-email" href="mailto:hello@zackboudekak.dev" id="email">hello@zackboudekak.dev</a>
-          <button class="btn" id="copy" type="button">Copy</button>
-        </div>
-        <dl class="channels">
-          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">in/zackary-boudekak ↗</a></dd></div>
-          <div><dt>Based in</dt><dd>Reading, UK</dd></div>
-          <div><dt>Projects</dt><dd>Looking to hire for a project? Email me to organise a call.</dd></div>
+  <section class="hero wrap">
+    <h1>Zackary<br>Boudekak</h1>
+    <div class="hero-row">
+      <p class="lede">Software &amp; cloud engineer. Final-year Computer Science (Hons) student at the University of Reading. I spent 13 months on cloud engineering at Virgin Media O2, and I co-founded <a href="https://www.voquota.com/" target="_blank" rel="noopener">VoQuota</a>, a quoting, invoicing and payments app for tradespeople.</p>
+      <div class="hero-side">
+        <a class="pill" href="#contact"><span class="dot" aria-hidden="true"></span>Open to work <span aria-hidden="true">+</span></a>
+        <dl class="now">
+          <div><dt>Now</dt><dd>Final year, BSc Computer Science</dd></div>
+          <div><dt>Before</dt><dd>Cloud Engineer Intern, Virgin Media O2</dd></div>
+          <div><dt>Building</dt><dd>VoQuota and Patchwick</dd></div>
         </dl>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <span>© <span id="year">2026</span> Zackary Boudekak</span>
-      <span>Reading, UK</span>
-    </footer>
-  </main>
-</div>
+  <div class="ticker-clip" aria-hidden="true"><div class="ticker">
+    <div class="ticker-track">
+      <span>Python</span><span>C#/.NET</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>AWS</span><span>Google Cloud</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
+      <span>Python</span><span>C#/.NET</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>AWS</span><span>Google Cloud</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
+    </div>
+  </div></div>
+
+  <section id="work" class="wrap sec">
+    <h2 class="sec-title">Selected work</h2>
+
+    <!-- VoQuota: the animated walkthrough -->
+    <article class="work feature">
+      <div class="tile t-violet">
+        <div class="player" id="player">
+          <p class="sr-only">An animated walkthrough of VoQuota. A tradesperson builds a quote on their phone and sends it. The customer opens it from an email and accepts it. The tradesperson converts it into an invoice in one click and sends it. The customer pays the invoice by card, and the tradesperson is told the payment has arrived.</p>
+
+          <div class="stage" id="stage" aria-hidden="true" data-phone="build" data-web="inbox" data-doc="quote" data-lines="0" data-focus="phone">
+
+            <!-- the tradesperson's phone -->
+            <div class="pane pane-phone">
+              <span class="pane-label">Tradesperson · VoQuota app</span>
+              <div class="phone">
+                <div class="notch"></div>
+                <div class="notif" id="notif">
+                  <span class="n-app">VoQuota · now</span>
+                  <b class="n-accept">John Doe accepted quote VQ-Q-000048</b>
+                  <b class="n-paid">Payment received: £1,700.00 from John Doe</b>
+                </div>
+
+                <div class="scr scr-build">
+                  <div class="a-head"><span>‹</span><b>New quote</b><span></span></div>
+                  <div class="a-field"><small>Customer</small>John Doe</div>
+                  <small class="a-sub">Items</small>
+                  <div class="a-items">
+                    <div class="a-item" data-i="1"><span>EICR<small>Electrical safety inspection</small></span><b>£200</b></div>
+                    <div class="a-item" data-i="2"><span>EV charger installation<small>Install electric vehicle charger</small></span><b>£1,200</b></div>
+                    <div class="a-item" data-i="3"><span>Double socket ×3<small>Install a new double socket</small></span><b>£300</b></div>
+                  </div>
+                  <div class="a-total"><span>Total inc. VAT</span><b id="qtotal">£0.00</b></div>
+                  <span class="fx fx-main" id="send-quote"><span class="lbl-a">Send quote</span><span class="lbl-b">Sent ✓</span></span>
+                </div>
+
+                <div class="scr scr-accepted">
+                  <div class="a-head"><span></span><b>Quotes</b><span></span></div>
+                  <div class="a-card">
+                    <div class="a-row"><b>VQ-Q-000048</b><span class="tag ok">Accepted</span></div>
+                    <div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div>
+                    <p class="muted">One click turns the accepted quote into an invoice, with every line carried across.</p>
+                    <span class="fx fx-main" id="convert">Convert to invoice</span>
+                  </div>
+                  <div class="a-card dim">
+                    <div class="a-row"><b>VQ-Q-000047</b><span class="tag">Sent</span></div>
+                    <div class="a-row muted"><span>Sarah Lee</span><span>£480.00</span></div>
+                  </div>
+                </div>
+
+                <div class="scr scr-review">
+                  <div class="a-head"><span>‹</span><b>Review invoice</b><span></span></div>
+                  <div class="a-who"><b>VQ-I-000023</b><span>John Doe · johndoe@gmail.com</span></div>
+                  <div class="a-items static">
+                    <div class="a-item"><span>EICR</span><b>1 @ £200</b></div>
+                    <div class="a-item"><span>EV charger installation</span><b>1 @ £1,200</b></div>
+                    <div class="a-item"><span>Double socket installation</span><b>3 @ £100</b></div>
+                  </div>
+                  <div class="a-sum">
+                    <div><span>Subtotal</span><span>£1,416.67</span></div>
+                    <div><span>VAT (20%)</span><span>£283.33</span></div>
+                    <div class="t"><span>Total</span><span>£1,700.00</span></div>
+                  </div>
+                  <div class="a-actions"><span class="fx fx-ghost">Draft</span><span class="fx fx-main" id="send-invoice"><span class="lbl-a">Send</span><span class="lbl-b">Sent ✓</span></span></div>
+                </div>
+
+                <div class="scr scr-paid">
+                  <div class="a-head"><span></span><b>Invoices</b><span></span></div>
+                  <div class="a-stat"><small>Paid this month</small><b id="ptotal">£480.00</b></div>
+                  <div class="a-card"><div class="a-row"><b>VQ-I-000023</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div></div>
+                  <div class="a-card dim"><div class="a-row"><b>VQ-I-000022</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>Sarah Lee</span><span>£480.00</span></div></div>
+                  <div class="a-card dim"><div class="a-row"><b>VQ-I-000021</b><span class="tag">Sent</span></div><div class="a-row muted"><span>Mike Patel</span><span>£960.00</span></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- the customer's browser -->
+            <div class="pane pane-web">
+              <span class="pane-label">Customer · email and browser</span>
+              <div class="browser">
+                <div class="b-bar"><i></i><i></i><i></i>
+                  <span class="b-url"><span class="u-inbox">mail.example.com/inbox</span><span class="u-quote">voquota.com/quote/VQ-Q-000048</span><span class="u-invoice">voquota.com/invoice/VQ-I-000023</span><span class="u-pay">🔒 voquota.com/invoice/VQ-I-000023/pay</span></span>
+                </div>
+                <div class="b-body">
+
+                  <div class="web web-inbox">
+                    <b class="m-h">Inbox</b>
+                    <div class="mail mail-new">
+                      <span class="m-from">VoQuota LTD</span>
+                      <span class="m-sub">Your quote VQ-Q-000048 · £1,700.00</span>
+                      <span class="fx fx-main sm" id="open-quote">View quote</span>
+                    </div>
+                    <div class="mail"><span class="m-from">Council Tax</span><span class="m-sub">Your annual bill is ready</span></div>
+                    <div class="mail"><span class="m-from">Gym</span><span class="m-sub">Your membership renews soon</span></div>
+                  </div>
+
+                  <div class="web web-doc">
+                    <div class="doc">
+                      <div class="d-top"><div><span class="d-logo">VQ</span><b class="d-co">VoQuota LTD</b></div><span class="d-date">13/10/2026</span></div>
+                      <div class="d-title"><b class="q-only">QUOTE</b><b class="i-only">INVOICE</b><span class="q-only">VQ-Q-000048</span><span class="i-only">VQ-I-000023</span></div>
+                      <div class="d-to"><b>| BILLED TO</b>John Doe · 42 High Street, Birmingham</div>
+                      <table class="d-table">
+                        <thead><tr><th>Description</th><th>Qty</th><th>Total</th></tr></thead>
+                        <tbody>
+                          <tr><td>EICR</td><td>1</td><td>£200.00</td></tr>
+                          <tr><td>EV charger installation</td><td>1</td><td>£1,200.00</td></tr>
+                          <tr><td>Double socket installation</td><td>3</td><td>£300.00</td></tr>
+                        </tbody>
+                      </table>
+                      <div class="d-totals"><div><span>Subtotal</span><span>£1,416.67</span></div><div><span>VAT (20%)</span><span>£283.33</span></div><div class="t"><span>Total</span><span>£1,700.00</span></div></div>
+                      <span class="stamp">PAID</span>
+                    </div>
+                    <div class="d-bar">
+                      <span class="q-only bar-ask"><span class="fx fx-ghost sm">Decline</span><span class="fx fx-ok sm" id="accept">Accept quote</span></span>
+                      <span class="q-only bar-done ok-line">✓ You accepted this quote</span>
+                      <span class="i-only bar-pay"><span class="fx fx-main sm wide" id="pay-now">Pay £1,700.00 now</span></span>
+                      <span class="i-only bar-paid ok-line">✓ Paid by card on 13/10/2026</span>
+                    </div>
+                  </div>
+
+                  <div class="web web-pay">
+                    <div class="pay">
+                      <small>Pay VoQuota LTD</small>
+                      <b class="pay-amt">£1,700.00</b>
+                      <small>Invoice VQ-I-000023</small>
+                      <div class="f"><small>Card number</small><span id="card">&nbsp;</span></div>
+                      <div class="f2"><div class="f"><small>Expiry</small><span class="fill">12 / 29</span></div><div class="f"><small>CVC</small><span class="fill">•••</span></div></div>
+                      <span class="fx fx-main wide" id="pay-submit"><span class="lbl-a">Pay £1,700.00</span><span class="lbl-b"><i class="spin"></i>Processing</span></span>
+                    </div>
+                  </div>
+
+                  <div class="web web-success">
+                    <div class="done">
+                      <span class="tick">✓</span>
+                      <b>Payment successful</b>
+                      <span>£1,700.00 paid to VoQuota LTD</span>
+                      <small>A receipt is on its way to johndoe@gmail.com</small>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="play" id="play" type="button" aria-label="Pause the walkthrough"><span class="i-pause" aria-hidden="true"></span><span class="i-play" aria-hidden="true"></span></button>
+            <div class="chapters">
+              <button type="button" class="chap" data-ch="0"><span class="chap-name">1 · Quote to invoice</span><span class="bar"><i></i></span></button>
+              <button type="button" class="chap" data-ch="1"><span class="chap-name">2 · Getting paid</span><span class="bar"><i></i></span></button>
+            </div>
+          </div>
+          <p class="caption" id="caption">A tradesperson builds a quote on their phone.</p>
+        </div>
+      </div>
+
+      <div class="cap">
+        <h3>VoQuota: quoting, invoicing and payments for tradespeople</h3>
+        <span class="meta">Co-founder · Live</span>
+      </div>
+      <div class="more">
+        <p>Tradespeople lose jobs when quoting takes too long, and writing quotes in Word after a day on site takes hours. VoQuota lets them build a quote on their phone in a few minutes, send it, turn it into an invoice with one click once the customer accepts, and get paid by card. I co-founded it with a fellow software engineering intern from Virgin Media O2, and we designed, built and launched it between the two of us.</p>
+        <ul class="points">
+          <li>Quote builder that totals labour, materials and extras, with VAT</li>
+          <li>Customer page to accept or decline, with no account needed</li>
+          <li>Card payments on every invoice</li>
+          <li>Each business's own branding on every quote, invoice and PDF</li>
+        </ul>
+        <p class="go"><a href="https://www.voquota.com/" target="_blank" rel="noopener">Visit voquota.com ↗</a></p>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="work">
+        <div class="tile t-orange">
+          <div class="shot-frame tilt-l">
+            <div class="mini-bar"><i></i><i></i><i></i></div>
+            <img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy">
+          </div>
+          <ul class="chips" aria-hidden="true"><li>Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Terraform</li></ul>
+        </div>
+        <div class="cap">
+          <h3>Job Application Tracker</h3>
+          <span class="meta">Solo project · Live</span>
+        </div>
+        <div class="more">
+          <p>A serverless app on AWS with sign-in, built and deployed entirely as code. I built it to keep track of my own job applications. The app is deliberately basic; the part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
+          <details>
+            <summary>How it's built</summary>
+            <ul class="points">
+              <li>A FastAPI app on one arm64 Lambda behind API Gateway, with DynamoDB for storage, so it costs pennies a month and nothing while idle</li>
+              <li>Sign-in through Cognito, with API Gateway checking the token before any code runs, and every record keyed by the user id from that verified token</li>
+              <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
+              <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
+              <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
+              <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
+            </ul>
+          </details>
+          <p class="stack">Python · FastAPI · AWS Lambda · DynamoDB · Cognito · CloudFront · Terraform · GitHub Actions</p>
+          <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="tile t-pink">
+          <div class="shot-frame tilt-r dark">
+            <div class="mini-bar"><i></i><i></i><i></i></div>
+            <img src="assets/patchwick.webp" width="1200" height="743" alt="A Patchwick client workspace showing an example project, Online booking for Northgate Dental, at stage 2 of 4 with its latest update." loading="lazy">
+          </div>
+        </div>
+        <div class="cap">
+          <h3>Patchwick</h3>
+          <span class="meta">Founder · In development</span>
+        </div>
+        <div class="more">
+          <p>Software studio site and client workspace, and the home-to-be of my freelance studio. Clients sign in to a workspace where each project lives in its own private repository, so they can follow every change from scoping to launch.</p>
+          <p class="go"><a href="https://zackary142.github.io/SEAgency/" target="_blank" rel="noopener">View Patchwick ↗</a></p>
+        </div>
+      </article>
+    </div>
+
+    <article class="work">
+      <div class="tile t-lime tile-wide">
+        <div class="migrate" aria-hidden="true">
+          <span class="m-node">Business system</span>
+          <span class="m-line"><i></i><i></i><i></i></span>
+          <span class="m-node m-cloud">Google Cloud</span>
+        </div>
+      </div>
+      <div class="cap">
+        <h3>Moving a business system to Google Cloud</h3>
+        <span class="meta">Virgin Media O2 · Project lead · 2025 to 2026</span>
+      </div>
+      <div class="more">
+        <p>During my placement I led the migration of a major business system onto Google Cloud, from the initial design through to go-live, working with the team that owned it and documenting the new setup for the people who'd run it after me.</p>
+        <p class="stack">Google Cloud · Cloud migration · Documentation</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="experience" class="wrap sec">
+    <h2 class="sec-title">Experience</h2>
+    <div class="table" role="table" aria-label="Experience">
+      <div class="tr th" role="row"><span role="columnheader">When</span><span role="columnheader">Role</span><span role="columnheader">Where</span><span role="columnheader">What I did</span></div>
+      <div class="tr" role="row">
+        <span role="cell" class="mono">Jul 2025 to Aug 2026</span>
+        <span role="cell"><b>Cloud Engineer Intern</b></span>
+        <span role="cell">Virgin Media O2 · 13-month placement</span>
+        <span role="cell"><ul class="points tight">
+          <li>Led a project to move a major business system onto Google Cloud, from design to go-live.</li>
+          <li>Built and maintained large-scale systems on Amazon Web Services and Google Cloud.</li>
+          <li>Kept systems secure by managing access, networks and certificates.</li>
+          <li>Worked in agile teams and wrote the documentation others relied on.</li>
+        </ul></span>
+      </div>
+      <div class="tr" role="row">
+        <span role="cell" class="mono">2023 to 2027</span>
+        <span role="cell"><b>BSc Computer Science (Hons)</b></span>
+        <span role="cell">University of Reading · with Industrial Placement</span>
+        <span role="cell"><ul class="points tight">
+          <li>Software design, databases, algorithms, networking and operating systems.</li>
+          <li>Final year: AI and machine learning, cloud-based AI, security and data visualisation, plus a final-year project.</li>
+        </ul></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="wrap sec">
+    <h2 class="sec-title">Skills</h2>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd><span>Python</span><span>Java</span><span>JavaScript</span><span>C#/.NET</span><span>C/C++</span><span>SQL</span><span>HTML/CSS</span></dd></div>
+      <div><dt>Cloud</dt><dd><span>AWS</span><span>Google Cloud</span><span>Terraform</span><span>Docker</span><span>IAM</span><span>VPC</span></dd></div>
+      <div><dt>Tooling</dt><dd><span>Git</span><span>GitHub Actions</span><span>GitLab CI/CD</span><span>Linux</span><span>Agile</span></dd></div>
+    </dl>
+  </section>
+
+  <section id="contact" class="sec">
+    <div class="contact wrap">
+      <h2>Let's talk.</h2>
+      <p>I'm open to graduate roles across software, cloud and infrastructure. Looking to hire for a project? Email me to organise a call.</p>
+      <div class="reach">
+        <a class="reach-email" href="mailto:hello@zackboudekak.dev" id="email">hello@zackboudekak.dev</a>
+        <button class="copy" id="copy" type="button">Copy</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <span class="foot-name">Zackary Boudekak</span>
+  <div class="foot-cols">
+    <div><b>Contact</b><a href="mailto:hello@zackboudekak.dev">Email</a><a href="https://www.linkedin.com/in/zackary-boudekak/" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div><b>Pages</b><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a></div>
+    <div><b>Elsewhere</b><a href="https://www.voquota.com/" target="_blank" rel="noopener">VoQuota</a><a href="https://github.com/Zackary142" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+  <span class="foot-small">© <span id="year">2026</span> · Reading, UK</span>
+</footer>
 
 <script src="assets/main.js"></script>
 </body>
