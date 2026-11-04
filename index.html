@@ -47,12 +47,6 @@
     </div>
   </section>
 
-  <div class="ticker-clip" aria-hidden="true"><div class="ticker">
-    <div class="ticker-track">
-      <span>Python</span><span>C#/.NET</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>AWS</span><span>Google Cloud</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
-      <span>Python</span><span>C#/.NET</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>AWS</span><span>Google Cloud</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
-    </div>
-  </div></div>
 
   <section id="work" class="wrap sec">
     <h2 class="sec-title">Selected work</h2>
@@ -77,7 +71,7 @@
                 </div>
 
                 <div class="scr scr-build">
-                  <div class="a-head"><span>‹</span><b>New quote</b><span></span></div>
+                  <div class="a-head"><span class="vq-logo">VQ</span><b>Create Quote</b><span class="a-menu"><i></i><i></i></span></div>
                   <div class="a-field"><small>Customer</small>John Doe</div>
                   <small class="a-sub">Items</small>
                   <div class="a-items">
@@ -90,12 +84,12 @@
                 </div>
 
                 <div class="scr scr-accepted">
-                  <div class="a-head"><span></span><b>Quotes</b><span></span></div>
+                  <div class="a-head"><span class="vq-logo">VQ</span><b>Quotes</b><span class="a-menu"><i></i><i></i></span></div>
                   <div class="a-card">
                     <div class="a-row"><b>VQ-Q-000048</b><span class="tag ok">Accepted</span></div>
                     <div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div>
                     <p class="muted">One click turns the accepted quote into an invoice, with every line carried across.</p>
-                    <span class="fx fx-main" id="convert">Convert to invoice</span>
+                    <span class="fx fx-main" id="convert">+ Convert to Invoice</span>
                   </div>
                   <div class="a-card dim">
                     <div class="a-row"><b>VQ-Q-000047</b><span class="tag">Sent</span></div>
@@ -104,7 +98,7 @@
                 </div>
 
                 <div class="scr scr-review">
-                  <div class="a-head"><span>‹</span><b>Review invoice</b><span></span></div>
+                  <div class="a-head"><span class="vq-logo">VQ</span><b>Review Invoice</b><span class="a-menu"><i></i><i></i></span></div>
                   <div class="a-who"><b>VQ-I-000023</b><span>John Doe · johndoe@gmail.com</span></div>
                   <div class="a-items static">
                     <div class="a-item"><span>EICR</span><b>1 @ £200</b></div>
@@ -120,8 +114,8 @@
                 </div>
 
                 <div class="scr scr-paid">
-                  <div class="a-head"><span></span><b>Invoices</b><span></span></div>
-                  <div class="a-stat"><small>Paid this month</small><b id="ptotal">£480.00</b></div>
+                  <div class="a-head"><span class="vq-logo">VQ</span><b>Invoices</b><span class="a-menu"><i></i><i></i></span></div>
+                  <div class="a-stat"><small>Paid This Month</small><b id="ptotal">£480.00</b></div>
                   <div class="a-card"><div class="a-row"><b>VQ-I-000023</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div></div>
                   <div class="a-card dim"><div class="a-row"><b>VQ-I-000022</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>Sarah Lee</span><span>£480.00</span></div></div>
                   <div class="a-card dim"><div class="a-row"><b>VQ-I-000021</b><span class="tag">Sent</span></div><div class="a-row muted"><span>Mike Patel</span><span>£960.00</span></div></div>
@@ -275,12 +269,14 @@
     </div>
 
     <article class="work">
-      <div class="tile t-lime tile-wide">
-        <div class="migrate" aria-hidden="true">
-          <span class="m-node">Business system</span>
-          <span class="m-line"><i></i><i></i><i></i></span>
-          <span class="m-node m-cloud">Google Cloud</span>
-        </div>
+      <div class="tile t-blue tile-wide">
+        <ol class="phases" aria-label="Project stages">
+          <li><span>01</span>Design</li>
+          <li><span>02</span>Migrate</li>
+          <li><span>03</span>Go-live</li>
+          <li><span>04</span>Handover</li>
+        </ol>
+        <p class="phase-note">Google Cloud · Virgin Media O2</p>
       </div>
       <div class="cap">
         <h3>Moving a business system to Google Cloud</h3>

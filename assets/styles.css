@@ -42,13 +42,6 @@ h1,h2,h3,p{margin:0}
 .now dt{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
 .now dd{margin:0;font-size:15px}
 
-/* skills ticker */
-.ticker-clip{overflow:hidden;padding:14px 0}
-.ticker{background:var(--ink);color:var(--lime);overflow:hidden;padding:14px 0;transform:rotate(-1.2deg);margin:0 -10px;width:calc(100% + 20px)}
-.ticker-track{display:flex;width:max-content}
-.ticker span{font-weight:800;font-stretch:125%;font-size:clamp(18px,2.4vw,28px);text-transform:uppercase;letter-spacing:-.01em;padding:0 22px;white-space:nowrap}
-.ticker span::after{content:"✦";margin-left:44px;color:var(--pink)}
-
 /* sections */
 .sec{padding-top:clamp(64px,9vw,120px)}
 .sec-title{font-weight:800;font-stretch:125%;font-size:clamp(32px,5vw,64px);letter-spacing:-.035em;line-height:1;margin-bottom:clamp(24px,3vw,40px);text-transform:uppercase}
@@ -89,12 +82,15 @@ details[open] summary{margin-bottom:10px}
 .chips li{background:var(--ink);color:#fff;font:500 12px/1 var(--mono);padding:8px 11px;border-radius:999px}
 
 /* Google Cloud tile */
-.tile-wide{min-height:0;aspect-ratio:auto;padding:clamp(40px,7vw,90px) clamp(20px,5vw,70px)}
-.migrate{display:flex;align-items:center;gap:clamp(10px,2vw,24px)}
-.m-node{font-weight:800;font-stretch:125%;font-size:clamp(20px,3.3vw,48px);letter-spacing:-.04em;text-transform:uppercase;line-height:.95;white-space:nowrap}
-.m-cloud{background:var(--ink);color:var(--lime);padding:.18em .35em;border-radius:.3em}
-.m-line{position:relative;flex:1;height:4px;min-width:40px;background:repeating-linear-gradient(90deg,var(--ink) 0 10px,transparent 10px 18px)}
-.m-line i{position:absolute;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--ink);left:0}
+.t-blue{background:var(--blue);color:#fff}
+.tile-wide{min-height:0;aspect-ratio:auto;padding:clamp(36px,6vw,80px) clamp(20px,5vw,70px) clamp(24px,3vw,36px);display:grid;gap:clamp(28px,4vw,48px)}
+.phases{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.phases::before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:rgba(255,255,255,.45)}
+.phases li{position:relative;padding-top:30px;font-size:clamp(20px,2.6vw,34px);font-weight:500;letter-spacing:-.02em}
+.phases li::before{content:"";position:absolute;left:0;top:0;width:15px;height:15px;border-radius:50%;background:#fff}
+.phases li:last-child::before{background:var(--lime)}
+.phases span{display:block;font:500 12px var(--mono);opacity:.7;margin-bottom:4px}
+.phase-note{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.75}
 
 /* ------- VoQuota walkthrough ------- */
 .player{padding:clamp(14px,3vw,36px) clamp(12px,3vw,36px) clamp(14px,2vw,24px)}
@@ -287,17 +283,11 @@ details[open] summary{margin-bottom:10px}
 
 /* motion */
 @media (prefers-reduced-motion:no-preference){
-  .ticker-track{animation:tick 38s linear infinite}
   .pill .dot{animation:ping 2s infinite}
-  .m-line i{animation:packet 2.4s linear infinite}
-  .m-line i:nth-child(2){animation-delay:.8s}
-  .m-line i:nth-child(3){animation-delay:1.6s}
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 }
-@keyframes tick{to{transform:translateX(-50%)}}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(205,245,71,.7)}70%{box-shadow:0 0 0 9px rgba(205,245,71,0)}100%{box-shadow:0 0 0 0 rgba(205,245,71,0)}}
-@keyframes packet{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:calc(100% - 14px);opacity:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
 
 /* tablets and phones */
@@ -330,7 +320,31 @@ details[open] summary{margin-bottom:10px}
   .now div{grid-template-columns:76px 1fr}
   .shot-frame{left:6%;right:-14%;top:22%}
   .tilt-r{left:-14%;right:6%}
-  .migrate{flex-direction:column;align-items:flex-start;gap:14px}
-  .m-line{width:4px;height:44px;flex:none;min-width:0;margin-left:20px;background:repeating-linear-gradient(180deg,var(--ink) 0 8px,transparent 8px 14px)}
-  .m-line i{display:none}
+  .phases{grid-template-columns:1fr 1fr;row-gap:28px}
+  .phases::before{display:none}
 }
+
+/* the phone, styled like the real VoQuota app (dark, green actions, navy stat cards) */
+.phone{--vq-bg:#0A0A0A;--vq-panel:#171717;--vq-line:#262626;--vq-text:#EDEDED;--vq-muted:#A1A1AA;--vq-green:#4ADE80;--vq-green-bg:#0F3D24;
+  background:var(--vq-bg);color:var(--vq-text);border-color:#1A1A1A;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.phone .notch{background:#000}
+.phone .a-head{grid-template-columns:26px 1fr 26px;border-bottom:1px solid var(--vq-line);margin:0 -16px;padding:0 16px 10px}
+.vq-logo{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#8FD3F4,#E6F4FF);color:#0B1220!important;font:800 9.5px/1 var(--sans)!important;letter-spacing:-.04em}
+.a-menu{display:grid;gap:4px;justify-items:end}
+.a-menu i{display:block;width:16px;height:1.5px;background:var(--vq-muted)}
+.phone .a-field,.phone .a-item,.phone .a-card{background:var(--vq-panel);border:1px solid var(--vq-line);border-radius:10px}
+.phone .a-field small,.phone .a-sub,.phone .a-item small,.phone .muted,.phone .a-who span{color:var(--vq-muted)}
+.phone .a-total,.phone .a-sum{border-top-color:var(--vq-line)}
+.phone .fx-main{background:var(--vq-green-bg);color:var(--vq-green);border-radius:8px}
+.phone .fx-ghost{background:#1F1F1F;color:#D4D4D8;border:1px solid #2E2E2E;border-radius:8px}
+.phone .fx.press{box-shadow:0 0 0 6px rgba(74,222,128,.18)}
+.stage.is-sent #send-quote,.stage.is-inv-sent #send-invoice{background:#14532D;color:#BBF7D0}
+.phone .tag{background:#172036;color:#9FB2D9}
+.phone .tag.ok{background:var(--vq-green-bg);color:var(--vq-green)}
+.phone .a-stat{background:linear-gradient(180deg,#1C1C1C 0%,#1B2B38 100%);border:1px solid #2B3B4A;border-radius:12px;color:var(--vq-text)}
+.phone .a-stat small{color:var(--vq-muted)}
+.phone .a-card.dim{opacity:.55}
+.phone .notif{background:rgba(38,38,38,.96);border:1px solid #333}
+/* the customer's side uses the business's own colour, as on the quote itself */
+.browser .fx-main{background:#0B4F7C}
+.browser .fx.press{box-shadow:0 0 0 7px rgba(11,79,124,.22)}
