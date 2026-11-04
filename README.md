@@ -4,7 +4,7 @@ The source for my personal portfolio. I'm a software and cloud engineer in Readi
 
 ## What's in it
 
-A single, dependency-free static page with a bold, colourful layout: a big name up top and the work shown as large colour tiles.
+A single, dependency-free static page: a big name up top and the work shown as large tiles, with violet as the one bold colour.
 
 - **Projects:** VoQuota (with an animated walkthrough of the quote, invoice and card payment flow, built in HTML and played like a video), a serverless Job Application Tracker on AWS (with Cognito sign-in), Patchwick, and a Google Cloud migration from my Virgin Media O2 placement
 - **Experience:** placement and degree
