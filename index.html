@@ -11,7 +11,8 @@
 <meta property="og:description" content="Software and cloud engineer in Reading. Co-founder of VoQuota, previously cloud engineering at Virgin Media O2.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#F2F1EC">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,9 +223,9 @@
     <div class="grid">
       <article class="work">
         <div class="tile t-neutral">
-          <div class="shot-frame tilt-l">
+          <div class="shot-frame tilt-l dark" style="background:#18181B">
             <div class="mini-bar"><i></i><i></i><i></i></div>
-            <picture><source media="(max-width:520px)" srcset="assets/job-tracker-phone.webp" width="780" height="1328"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></picture>
+            <picture><source media="(max-width:520px)" srcset="assets/job-tracker-phone.webp" width="780" height="1328"><img src="assets/job-tracker.webp" width="1200" height="744" alt="The Job Application Tracker after pasting a job link: auto-fill has filled in the company, role, salary, location and work mode, ready to check and save." loading="lazy"></picture>
           </div>
           <ul class="chips" aria-hidden="true"><li>Lambda</li><li>DynamoDB</li><li>Bedrock</li><li>Terraform</li></ul>
         </div>
@@ -233,7 +234,7 @@
           <span class="meta">Solo project · Live</span>
         </div>
         <div class="more">
-          <p>A serverless app on AWS with sign-in, built and deployed entirely as code. I built it to keep track of my own job applications: paste in a job ad, or just its link, and Claude on Amazon Bedrock fills in the form for you. The part I cared about most was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
+          <p>A serverless app on AWS with sign-in, built and deployed entirely as code. I built it to keep track of my own job applications: paste in a job ad, or just its link, and Claude on Amazon Bedrock fills in the form for you (salary, experience needed, closing date, location and more), ready to check before saving. The part I cared about most was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
           <details>
             <summary>How it's built</summary>
             <ul class="points">
@@ -242,7 +243,8 @@
               <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
               <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
               <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
-              <li>AI auto-fill using Claude Haiku 4.5 on Bedrock through an EU inference profile. It takes pasted ad text or a link, which the Lambda fetches itself and only from public addresses</li>
+              <li>AI auto-fill using Claude Haiku 4.5 on Bedrock through an EU inference profile, so the data stays in the EU. Structured outputs mean the answer always matches a pydantic schema, and it costs roughly 0.5p per ad</li>
+              <li>Links are fetched by the Lambda itself, only from public addresses (checked again after redirects), with size limits, so it can't be used to reach anything internal</li>
               <li>Auto-fill is limited to a Cognito group I manage, enforced by the API rather than just hidden in the UI, so a stranger signing up can't run up my Bedrock bill</li>
               <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB and a faked Bedrock</li>
             </ul>
