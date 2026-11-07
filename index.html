@@ -66,61 +66,80 @@
               <div class="phone">
                 <div class="notch"></div>
                 <div class="notif" id="notif">
-                  <span class="n-app">VoQuota · now</span>
+                  <span class="n-app"><img src="assets/voquota-mark-white.png" width="24" height="14" alt=""> VoQuota · now</span>
                   <b class="n-accept">John Doe accepted quote VQ-Q-000048</b>
                   <b class="n-paid">Payment received: £1,700.00 from John Doe</b>
                 </div>
-
-                <div class="scr scr-build">
-                  <div class="a-head"><span class="vq-logo">VQ</span><b>Create Quote</b><span class="a-menu"><i></i><i></i></span></div>
-                  <div class="a-field"><small>Customer</small>John Doe</div>
-                  <small class="a-sub">Items</small>
-                  <div class="a-items">
-                    <div class="a-item" data-i="1"><span>EICR<small>Electrical safety inspection</small></span><b>£200</b></div>
-                    <div class="a-item" data-i="2"><span>EV charger installation<small>Install electric vehicle charger</small></span><b>£1,200</b></div>
-                    <div class="a-item" data-i="3"><span>Double socket ×3<small>Install a new double socket</small></span><b>£300</b></div>
-                  </div>
-                  <div class="a-total"><span>Total inc. VAT</span><b id="qtotal">£0.00</b></div>
-                  <span class="fx fx-main" id="send-quote"><span class="lbl-a">Send quote</span><span class="lbl-b">Sent ✓</span></span>
+                <div class="lp-top">
+                  <svg class="lp-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  <img class="lp-wm" src="assets/voquota-wordmark.png" width="120" height="22" alt="VoQuota">
+                  <span class="lp-av">Z</span>
                 </div>
+                <div class="lp-body">
 
-                <div class="scr scr-accepted">
-                  <div class="a-head"><span class="vq-logo">VQ</span><b>Quotes</b><span class="a-menu"><i></i><i></i></span></div>
-                  <div class="a-card">
-                    <div class="a-row"><b>VQ-Q-000048</b><span class="tag ok">Accepted</span></div>
-                    <div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div>
-                    <p class="muted">One click turns the accepted quote into an invoice, with every line carried across.</p>
+                  <div class="scr scr-build">
+                    <b class="lp-h">Create Quote</b>
+                    <div class="a-field"><small>Customer</small>John Doe</div>
+                    <small class="a-sub">Items</small>
+                    <div class="a-items">
+                      <div class="a-item" data-i="1"><span>EICR<small>Electrical safety inspection</small></span><b>£200.00</b></div>
+                      <div class="a-item" data-i="2"><span>EV Charger Installation<small>1 × £1,200.00</small></span><b>£1,200.00</b></div>
+                      <div class="a-item" data-i="3"><span>Double Socket Installation<small>3 × £100.00</small></span><b>£300.00</b></div>
+                    </div>
+                    <div class="a-total"><span>Total inc. VAT</span><b id="qtotal">£0.00</b></div>
+                    <span class="fx fx-main" id="send-quote"><span class="lbl-a">Send Quote</span><span class="lbl-b">Sent ✓</span></span>
+                  </div>
+
+                  <div class="scr scr-accepted">
+                    <div class="lp-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2"/></svg>Search Quotes...</div>
+                    <div class="lp-list">
+                      <div class="lp-row hi"><div class="a-row"><b>John Doe</b><span class="tag ok">Accepted</span></div><div class="a-row muted"><span>VQ-Q-000048 · 13 Oct</span><b>£1,700.00</b></div></div>
+                      <div class="lp-row"><div class="a-row"><b>Sarah Lee</b><span class="tag">Sent</span></div><div class="a-row muted"><span>VQ-Q-000047 · 12 Oct</span><b>£480.00</b></div></div>
+                      <div class="lp-row"><div class="a-row"><b>Mike Patel</b><span class="tag">Draft</span></div><div class="a-row muted"><span>VQ-Q-000046 · 10 Oct</span><b>£960.00</b></div></div>
+                    </div>
+                    <p class="muted lp-note">One tap turns the accepted quote into an invoice, with every line carried across.</p>
                     <span class="fx fx-main" id="convert">+ Convert to Invoice</span>
                   </div>
-                  <div class="a-card dim">
-                    <div class="a-row"><b>VQ-Q-000047</b><span class="tag">Sent</span></div>
-                    <div class="a-row muted"><span>Sarah Lee</span><span>£480.00</span></div>
-                  </div>
-                </div>
 
-                <div class="scr scr-review">
-                  <div class="a-head"><span class="vq-logo">VQ</span><b>Review Invoice</b><span class="a-menu"><i></i><i></i></span></div>
-                  <div class="a-who"><b>VQ-I-000023</b><span>John Doe · johndoe@gmail.com</span></div>
-                  <div class="a-items static">
-                    <div class="a-item"><span>EICR</span><b>1 @ £200</b></div>
-                    <div class="a-item"><span>EV charger installation</span><b>1 @ £1,200</b></div>
-                    <div class="a-item"><span>Double socket installation</span><b>3 @ £100</b></div>
+                  <div class="scr scr-review">
+                    <b class="lp-h">Review Invoice</b>
+                    <div class="a-who"><b>VQ-I-000023</b><span>John Doe · johndoe@gmail.com</span></div>
+                    <div class="a-items static">
+                      <div class="a-item"><span>EICR</span><b>1 @ £200</b></div>
+                      <div class="a-item"><span>EV Charger Installation</span><b>1 @ £1,200</b></div>
+                      <div class="a-item"><span>Double Socket Installation</span><b>3 @ £100</b></div>
+                    </div>
+                    <div class="a-sum">
+                      <div><span>Subtotal</span><span>£1,416.67</span></div>
+                      <div><span>VAT (20%)</span><span>£283.33</span></div>
+                      <div class="t"><span>Total</span><span>£1,700.00</span></div>
+                    </div>
+                    <div class="a-actions"><span class="fx fx-ghost">Draft</span><span class="fx fx-main" id="send-invoice"><span class="lbl-a">Send</span><span class="lbl-b">Sent ✓</span></span></div>
                   </div>
-                  <div class="a-sum">
-                    <div><span>Subtotal</span><span>£1,416.67</span></div>
-                    <div><span>VAT (20%)</span><span>£283.33</span></div>
-                    <div class="t"><span>Total</span><span>£1,700.00</span></div>
-                  </div>
-                  <div class="a-actions"><span class="fx fx-ghost">Draft</span><span class="fx fx-main" id="send-invoice"><span class="lbl-a">Send</span><span class="lbl-b">Sent ✓</span></span></div>
-                </div>
 
-                <div class="scr scr-paid">
-                  <div class="a-head"><span class="vq-logo">VQ</span><b>Invoices</b><span class="a-menu"><i></i><i></i></span></div>
-                  <div class="a-stat"><small>Paid This Month</small><b id="ptotal">£480.00</b></div>
-                  <div class="a-card"><div class="a-row"><b>VQ-I-000023</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>John Doe</span><span>£1,700.00</span></div></div>
-                  <div class="a-card dim"><div class="a-row"><b>VQ-I-000022</b><span class="tag ok">Paid</span></div><div class="a-row muted"><span>Sarah Lee</span><span>£480.00</span></div></div>
-                  <div class="a-card dim"><div class="a-row"><b>VQ-I-000021</b><span class="tag">Sent</span></div><div class="a-row muted"><span>Mike Patel</span><span>£960.00</span></div></div>
+                  <div class="scr scr-paid">
+                    <b class="lp-h">Dashboard</b>
+                    <div class="lp-stats">
+                      <div class="a-stat"><small>Quotes This Month</small><b>4 / £4,640</b></div>
+                      <div class="a-stat"><small>Invoices This Month</small><b>3 / £3,140</b></div>
+                      <div class="a-stat"><small>Open Quotes</small><b>1</b></div>
+                      <div class="a-stat"><small>Paid This Month</small><b id="ptotal">£480.00</b></div>
+                    </div>
+                    <b class="lp-h2">Recent Activity</b>
+                    <div class="lp-act">
+                      <div class="ar new"><span>Invoice paid</span><span>John Doe</span><span class="view">View</span></div>
+                      <div class="ar"><span>Invoice sent</span><span>John Doe</span><span class="view">View</span></div>
+                      <div class="ar"><span>Quote accepted</span><span>John Doe</span><span class="view">View</span></div>
+                    </div>
+                  </div>
                 </div>
+                <nav class="lp-tabs">
+                  <span class="tab t-quotes"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z M10 11h6 M10 15h6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Quotes</span>
+                  <span class="tab t-invoices"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v10M14.5 9.5c0-1-1-1.5-2.5-1.5s-2.5.6-2.5 1.7c0 2.6 5 1.4 5 4 0 1.1-1 1.8-2.5 1.8s-2.5-.6-2.5-1.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Invoices</span>
+                  <span class="fab">+</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z M5 17a3 3 0 0 1 3-3h11" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Catalog</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6M16 5a3 3 0 0 1 0 6M17.5 14.6c1.6.6 2.7 2 3 4.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Customers</span>
+                </nav>
               </div>
             </div>
 

@@ -322,27 +322,59 @@ details[open] summary{margin-bottom:10px}
   .phases::before{display:none}
 }
 
-/* the phone, styled like the real VoQuota app (dark, green actions, navy stat cards) */
-.phone{--vq-bg:#0A0A0A;--vq-panel:#171717;--vq-line:#262626;--vq-text:#EDEDED;--vq-muted:#A1A1AA;--vq-green:#4ADE80;--vq-green-bg:#0F3D24;
-  background:var(--vq-bg);color:var(--vq-text);border-color:#1A1A1A;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-.phone .notch{background:#000}
-.phone .a-head{grid-template-columns:26px 1fr 26px;border-bottom:1px solid var(--vq-line);margin:0 -16px;padding:0 16px 10px}
-.vq-logo{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#8FD3F4,#E6F4FF);color:#0B1220!important;font:800 9.5px/1 var(--sans)!important;letter-spacing:-.04em}
-.a-menu{display:grid;gap:4px;justify-items:end}
-.a-menu i{display:block;width:16px;height:1.5px;background:var(--vq-muted)}
-.phone .a-field,.phone .a-item,.phone .a-card{background:var(--vq-panel);border:1px solid var(--vq-line);border-radius:10px}
-.phone .a-field small,.phone .a-sub,.phone .a-item small,.phone .muted,.phone .a-who span{color:var(--vq-muted)}
+/* the phone, styled like the real VoQuota mobile app (light theme, green actions, soft blue stat cards) */
+.phone{--vq-line:#E5E7EB;--vq-muted:#6B7280;background:#F7F8FA;color:#111827;border-color:#111;font:400 12.5px/1.35 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column}
+.phone .notch{top:7px;width:78px;height:20px;margin-left:-39px;background:#111}
+.lp-top{flex:none;display:grid;grid-template-columns:28px 1fr 28px;align-items:center;justify-items:center;padding:34px 14px 10px;background:#fff;border-bottom:1px solid #ECEEF2}
+.lp-home{width:18px;height:18px;justify-self:start;color:#111}
+.lp-wm{height:12px;width:auto}
+.lp-av{justify-self:end;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#F1F2F4;border:1px solid #E3E5E9;font-size:10px;color:#444}
+.lp-body{position:relative;flex:1;min-height:0}
+.phone .scr{padding:12px 13px 12px;gap:8px}
+.lp-h{text-align:center;font-weight:500;font-size:15px;margin:2px 0}
+.lp-h2{font-weight:500;font-size:13px;margin-top:2px}
+.phone .a-field,.phone .a-item{background:#fff;border:1px solid var(--vq-line);border-radius:9px;padding:7px 10px;font-weight:600}
+.phone .a-items{gap:6px}
+.phone .a-items.static .a-item{font-weight:600}
+.phone .a-field small,.phone .a-sub,.phone .a-item small,.phone .muted,.phone .a-who span{color:var(--vq-muted);font-size:10.5px}
 .phone .a-total,.phone .a-sum{border-top-color:var(--vq-line)}
-.phone .fx-main{background:var(--vq-green-bg);color:var(--vq-green);border-radius:8px}
-.phone .fx-ghost{background:#1F1F1F;color:#D4D4D8;border:1px solid #2E2E2E;border-radius:8px}
-.phone .fx.press{box-shadow:0 0 0 6px rgba(74,222,128,.18)}
-.stage.is-sent #send-quote,.stage.is-inv-sent #send-invoice{background:#14532D;color:#BBF7D0}
-.phone .tag{background:#172036;color:#9FB2D9}
-.phone .tag.ok{background:var(--vq-green-bg);color:var(--vq-green)}
-.phone .a-stat{background:linear-gradient(180deg,#1C1C1C 0%,#1B2B38 100%);border:1px solid #2B3B4A;border-radius:12px;color:var(--vq-text)}
-.phone .a-stat small{color:var(--vq-muted)}
-.phone .a-card.dim{opacity:.55}
-.phone .notif{background:rgba(38,38,38,.96);border:1px solid #333}
+.phone .a-total b{font-size:20px}
+.phone .a-sum .t{font-size:14.5px}
+.phone .fx{border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600}
+.phone .fx-main{background:#BBF7D0;color:#15803D}
+.phone .fx-ghost{background:#fff;color:#4B5563;border:1px solid var(--vq-line)}
+.phone .fx.press{box-shadow:0 0 0 6px rgba(34,197,94,.2)}
+.stage.is-sent #send-quote,.stage.is-inv-sent #send-invoice{background:#22C55E;color:#fff}
+.phone .tag{font-size:10px;font-weight:500;background:none;color:var(--vq-muted);padding:2px 0}
+.phone .tag.ok{background:#DCFCE7;color:#15803D;padding:2px 7px;font-weight:600}
+.lp-search{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--vq-line);border-radius:9px;padding:7px 10px;color:#9CA3AF}
+.lp-search svg{width:13px;height:13px}
+.lp-list{background:#fff;border:1px solid var(--vq-line);border-radius:12px;overflow:hidden}
+.lp-row{padding:9px 11px;display:grid;gap:4px}
+.lp-row+.lp-row{border-top:1px solid #EEF0F3}
+.lp-row.hi{background:#F3FBF6}
+.lp-row .muted b{color:#111827;font-size:11.5px}
+.lp-note{margin-top:auto;font-size:11px!important;line-height:1.4}
+.lp-stats{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.phone .a-stat{background:linear-gradient(180deg,#fff 0%,#E4EDF9 100%);border:1px solid #D6DFEB;border-radius:12px;padding:9px 10px;color:#111827;gap:3px;align-content:start;min-height:66px}
+.phone .a-stat small{color:var(--vq-muted);font-size:9.5px}
+.phone .a-stat b{font-size:14px;letter-spacing:-.01em;line-height:1.15}
+.lp-act{background:#fff;border:1px solid var(--vq-line);border-radius:10px;font-size:10.5px;overflow:hidden}
+.ar{display:grid;grid-template-columns:1.3fr 1fr auto;align-items:center;gap:6px;padding:7px 9px}
+.ar+.ar{border-top:1px solid #EEF0F3}
+.view{color:#16A34A;background:#F0FDF4;border-radius:6px;padding:2px 7px;font-size:10px}
+.ar.new{background:#F0FDF4;max-height:0;padding-top:0;padding-bottom:0;opacity:0;transition:max-height .5s .5s,padding .5s .5s,opacity .4s .6s}
+.stage.is-paid .ar.new{max-height:40px;padding-top:7px;padding-bottom:7px;opacity:1}
+.lp-tabs{flex:none;position:relative;display:grid;grid-template-columns:1fr 1fr 56px 1fr 1.15fr;align-items:end;background:#fff;border-top:1px solid #ECEEF2;padding:7px 2px 12px}
+.tab{display:grid;justify-items:center;gap:2px;font-size:8.5px;color:#6B7280;position:relative;transition:color .3s}
+.tab svg{width:16px;height:16px}
+.tab::after{content:"";position:absolute;bottom:-6px;width:22px;height:2px;border-radius:2px;background:#111;opacity:0;transition:opacity .3s}
+.stage[data-phone="build"] .t-quotes,.stage[data-phone="accepted"] .t-quotes,.stage[data-phone="review"] .t-invoices{color:#111}
+.stage[data-phone="build"] .t-quotes::after,.stage[data-phone="accepted"] .t-quotes::after,.stage[data-phone="review"] .t-invoices::after{opacity:1}
+.fab{justify-self:center;align-self:start;margin-top:-24px;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#4ADE80;color:#fff;font-size:23px;line-height:1;box-shadow:0 6px 14px -4px rgba(34,197,94,.6)}
+.phone .notif{top:30px;left:7px;right:7px;transform:translateY(calc(-100% - 44px));background:rgba(28,28,32,.94);border:0;font-size:11.5px;border-radius:15px}
+.phone .n-app{display:flex;align-items:center;gap:5px}
+.phone .n-app img{height:7px;width:auto}
 /* the customer's side uses the business's own colour, as on the quote itself */
 .browser .fx-main{background:#0B4F7C}
 .browser .fx.press{box-shadow:0 0 0 7px rgba(11,79,124,.22)}
