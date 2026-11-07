@@ -18,7 +18,8 @@ It works down to phone width, and respects reduced-motion settings (the walkthro
 index.html                   the page
 assets/styles.css            all styling (colour tokens at the top)
 assets/main.js               VoQuota walkthrough player, scroll reveals, copy-email button
-assets/favicon.svg           site icon (browser tab and search results)
+assets/favicon-32.png        site icon (browser tab)
+assets/favicon-192.png       larger site icon (search results, Android)
 assets/job-tracker.webp      Job Application Tracker screenshot
 assets/patchwick.webp        Patchwick client workspace screenshot
 assets/*-phone.webp          phone-sized versions of both screenshots, used on small screens
