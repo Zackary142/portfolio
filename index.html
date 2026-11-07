@@ -226,14 +226,14 @@
             <div class="mini-bar"><i></i><i></i><i></i></div>
             <picture><source media="(max-width:520px)" srcset="assets/job-tracker-phone.webp" width="780" height="1328"><img src="assets/job-tracker.webp" width="980" height="600" alt="The Job Application Tracker: a form to add an application, and a table listing two example applications with their status." loading="lazy"></picture>
           </div>
-          <ul class="chips" aria-hidden="true"><li>Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Terraform</li></ul>
+          <ul class="chips" aria-hidden="true"><li>Lambda</li><li>DynamoDB</li><li>Bedrock</li><li>Terraform</li></ul>
         </div>
         <div class="cap">
           <h3>Job Application Tracker</h3>
           <span class="meta">Solo project · Live</span>
         </div>
         <div class="more">
-          <p>A serverless app on AWS with sign-in, built and deployed entirely as code. I built it to keep track of my own job applications. The app is deliberately basic; the part I cared about was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
+          <p>A serverless app on AWS with sign-in, built and deployed entirely as code. I built it to keep track of my own job applications: paste in a job ad, or just its link, and Claude on Amazon Bedrock fills in the form for you. The part I cared about most was how it's built and shipped. The infrastructure is all Terraform, every change goes through a CI/CD pipeline, and there are no AWS keys stored anywhere.</p>
           <details>
             <summary>How it's built</summary>
             <ul class="points">
@@ -242,10 +242,12 @@
               <li>The frontend sits in a private S3 bucket served through CloudFront, and the bucket is never public</li>
               <li>Terraform split into two stacks, with remote state in a versioned S3 bucket and native locking</li>
               <li>GitHub Actions signs in to AWS with OIDC, plans on every pull request, then applies, deploys and smoke tests on merge, including a check that the API rejects requests without a token</li>
-              <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB</li>
+              <li>AI auto-fill using Claude Haiku 4.5 on Bedrock through an EU inference profile. It takes pasted ad text or a link, which the Lambda fetches itself and only from public addresses</li>
+              <li>Auto-fill is limited to a Cognito group I manage, enforced by the API rather than just hidden in the UI, so a stranger signing up can't run up my Bedrock bill</li>
+              <li>Least-privilege IAM throughout, with unit tests run against a mocked DynamoDB and a faked Bedrock</li>
             </ul>
           </details>
-          <p class="stack">Python · FastAPI · AWS Lambda · DynamoDB · Cognito · CloudFront · Terraform · GitHub Actions</p>
+          <p class="stack">Python · FastAPI · AWS Lambda · DynamoDB · Cognito · Amazon Bedrock · CloudFront · Terraform · GitHub Actions</p>
           <p class="go"><a href="https://dbnlo8ssgi74t.cloudfront.net" target="_blank" rel="noopener">Try it live ↗</a><a href="https://github.com/Zackary142/job-application-tracker" target="_blank" rel="noopener">View on GitHub ↗</a></p>
         </div>
       </article>
